@@ -1,12 +1,9 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
     <record model="site.course" id="course0">
         <field name="name">Course 0</field>
-        <field name="description">
-        Course 0's description can have
-            multiple lines
-        </field>
+        <field name="description">Course 0's description can have multiple lines </field>
     </record>
     <record model="site.course" id="sourse1">
         <field name="name">Course 1</field>
@@ -16,4 +13,4 @@
         <field name="description">Course for python</field>
     </record>
     </data>
-</odoo> --!>
+</odoo>
