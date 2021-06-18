@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ********************** FORMS ****************************** -->
+    <!-- construction.material form view -->
+    <record id="supplier_view_form" model="ir.ui.view">
+        <field name="name">construction.supplier.view.form</field>
+        <field name="model">construction.supplier</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="web_site"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ***************************** SEARCH ************************* -->
+    <record model="ir.ui.view" id="supplier_search_view">
+        <field name="name">supplier.search</field>
+        <field name="model">construction.supplier</field>
+        <field name="arch" type="xml">
+            <search string='Buscar proveedor'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ********************** TREE VIEWS ************************* -->
+    <!-- construction.material tree view -->
+    <record id="supplier_view_tree" model="ir.ui.view">
+        <field name="name">construction.supplier.view.tree</field>
+        <field name="model">construction.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="web_site"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ********************** ACTIONS ****************************** -->
+
+    <!-- construction.material action window -->
+    <record id="supplier_list_action" model="ir.actions.act_window">
+        <field name="name">Proveedor</field>
+        <field name="res_model">construction.supplier</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear proveedor.
+            </p>
+        </field>
+    </record>
+
+    <!-- ************************* MENUS ***************************** -->
+
+    <!-- items menu proveedores -->
+    <menuitem id="item_menu_suppliers" name="Proveedores" parent="main_catalogs_menu" action="supplier_list_action"/>
+</odoo>
