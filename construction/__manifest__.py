@@ -3,8 +3,7 @@
     'name': "Construction",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        This constructuion app is used to manage the resourses involved in a construction project (clients, machinery, materials, projects and more)""",
 
     'description': """
         This constructuion app is used to manage the resourses involved in a construction project (clients, machinery, materials, projects and more)
