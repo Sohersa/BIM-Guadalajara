@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ********************** FORMS ****************************** -->
+    <!-- construction.material form view -->
+    <record id="material_view_form" model="ir.ui.view">
+        <field name="name">construction.material.view.form</field>
+        <field name="model">construction.material</field>
+        <field name="arch" type="xml">
+            <form string="Material">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="m_unit"/>
+                            <field name="performance"/>
+                            <field name="cost"/>
+                            <field name="coin"/>
+                            <field name="web_site"/>
+                            <field name="supplier"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ***************************** SEARCH ************************* -->
+    <record model="ir.ui.view" id="material_search_view">
+        <field name="name">material.search</field>
+        <field name="model">construction.material</field>
+        <field name="arch" type="xml">
+            <search string='Buscar material'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ********************** TREE VIEWS ************************* -->
+    <!-- construction.material tree view -->
+    <record id="material_view_tree" model="ir.ui.view">
+        <field name="name">construction.material.view.tree</field>
+        <field name="model">construction.material</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="m_unit"/>
+                <field name="coin"/>
+                <field name="web_site"/>
+                <field name="supplier"/>
+                <field name="performance"/>
+                <field name="cost"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ********************** ACTIONS ****************************** -->
+
+    <!-- construction.material action window -->
+    <record id="material_list_action" model="ir.actions.act_window">
+        <field name="name">Material</field>
+        <field name="res_model">construction.material</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear material.
+            </p>
+        </field>
+    </record>
+
+    <!-- ************************* MENUS ***************************** -->
+
+    <!-- items menu materiales -->
+    <menuitem id="item_menu_materials" name="Materiales" parent="main_catalogs_menu" action="material_list_action"/>
+</odoo>
