@@ -34,9 +34,9 @@ class Machinery(models.Model):
     effective_working_hours_shift = fields.Float(digits=(6,4), string='Horas efectivas de trabajo por turno')
     lubricant_time = fields.Float(digits=(6,4), string='Tiempo entre cambio de lubricante')
 
-    economic_life_years = fields.Integer(digits=(6,4), string='Vida economica en años')
-    economic_life = fields.Integer(digits=(6,4), string='Vida economica', readonly=True, compute='_get_economic_life')
-    hours_per_year = fields.Integer(digits=(6,4), string='Horas por año')
+    economic_life_years = fields.Integer(string='Vida economica en años')
+    economic_life = fields.Integer(string='Vida economica', readonly=True, compute='_get_economic_life')
+    hours_per_year = fields.Integer(string='Horas por año')
     fuel_cost = fields.Float(digits=(6,4), string='Costo combustible')
     lubricant_cost = fields.Float(digits=(6,4), string='Costo lubricante')
     rated_power = fields.Float(digits=(6,4), string='Potencia nominal')
