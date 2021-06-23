@@ -38,7 +38,7 @@
         'views/machinery_views.xml',
         'views/suppliers_views.xml',
         'views/bim_views.xml',
-        'views/assets.xml'
+        #'views/assets.xml'
     ],
     
     'qweb': [

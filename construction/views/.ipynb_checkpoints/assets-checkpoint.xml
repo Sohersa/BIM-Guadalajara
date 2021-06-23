@@ -16,7 +16,8 @@
             <script type="text/javascript" src="../static/src/js/model_viewer.js"></script>
 
             <script type="text/javascript" src="../static/src/js/site.js"></script>
-            <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css" />
+            <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+            type="text/css" />
             <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
         </xpath>
         <xpath expr="//link[last()]" position="after">
@@ -28,7 +29,6 @@
 
             <!-- *************** MODEL VIEWER WIDGET ************ -->
             <link rel="stylesheet" href="../static/src/css/model_viewer.css" />
-
         </xpath>
     </template>
 
