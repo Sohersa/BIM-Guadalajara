@@ -14,7 +14,7 @@
 
             <!-- *************** MODEL VIEWER WIDGET ************ -->
             <script type="text/javascript" src="/construction/static/src/js/model_viewer.js"></script>
-
+          
             <script type="text/javascript" src="/construction/static/src/js/site.js"></script>
             <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
             type="text/css" />
