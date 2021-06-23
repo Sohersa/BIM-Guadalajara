@@ -10,7 +10,7 @@
     """,
 
     'author': "Grupo Sohersa",
-    'website': "http://www.yourcompany.com",
+    'website': "http://www.sohersabim.com",
     'images': [
         'static/description/icon.png',
         'static/src/img/icon.png'
@@ -23,8 +23,6 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'web',
-        'website',
         'base'
     ],
 
@@ -40,7 +38,7 @@
         'views/machinery_views.xml',
         'views/suppliers_views.xml',
         'views/bim_views.xml',
-        'views/assets.xml',
+        'views/assets.xml'
     ],
     
     'qweb': [
@@ -51,4 +49,8 @@
     'demo': [
         'demo/demo.xml',
     ],
+    
+    'installable': True,
+    'auto_install': False,
+    'application': True,
 }
