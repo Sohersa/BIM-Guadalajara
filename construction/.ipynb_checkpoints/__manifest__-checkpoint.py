@@ -12,7 +12,7 @@
     'author': "Grupo Sohersa",
 
     'website': "http://www.sohersabim.com",
-
+  
     'images': [
         'static/description/icon.png',
         'static/src/img/icon.png'
@@ -27,6 +27,7 @@
     # any module necessary for this one to work correctly
     'depends': [
         'web',
+        'website',
         'base'
     ],
 
@@ -53,7 +54,7 @@
     'demo': [
         'demo/demo.xml',
     ],
-    
+
     'installable': True,
     'auto_install': False,
     'application': True,
