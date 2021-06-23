@@ -2,33 +2,33 @@
 <odoo>
     <template id="assets_backend" inherit_id="web.assets_backend" name="tree_concepts_template">
         <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="../static/src/js/tree_view_construction.js"></script>
-            <link rel="stylesheet" href="../static/src/css/style.css" />
+            <script type="text/javascript" src="/construction/static/src/js/tree_view_construction.js"></script>
+            <link rel="stylesheet" href="/construction/static/src/css/style.css" />
             <!-- *************** BIM WIDGET ************** -->
-            <script type="text/javascript" src="../static/src/js/tree_view_folders.js"></script>
-            <script type="text/javascript" src="../static/src/js/my_extension.js"></script>
-            <script type="text/javascript" src="../static/src/js/utils.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/tree_view_folders.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/my_extension.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/utils.js"></script>
 
             <!-- *************** MODEL SELECT WIDGET ************ -->
-            <script type="text/javascript" src="../static/src/js/model_select.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/model_select.js"></script>
 
             <!-- *************** MODEL VIEWER WIDGET ************ -->
-            <script type="text/javascript" src="../static/src/js/model_viewer.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/model_viewer.js"></script>
 
-            <script type="text/javascript" src="../static/src/js/site.js"></script>
+            <script type="text/javascript" src="/construction/static/src/js/site.js"></script>
             <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
             type="text/css" />
             <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
         </xpath>
         <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" href="../static/src/css/tree_view_construction.css" />
-            <link rel="stylesheet" href="../static/src/css/tree_view_folders.css" />
+            <link rel="stylesheet" href="/construction/static/src/css/tree_view_construction.css" />
+            <link rel="stylesheet" href="/construction/static/src/css/tree_view_folders.css" />
 
             <!-- *************** MODEL SELECT WIDGET ************ -->
-            <link rel="stylesheet" href="../static/src/css/model_select.css" />
+            <link rel="stylesheet" href="/construction/static/src/css/model_select.css" />
 
             <!-- *************** MODEL VIEWER WIDGET ************ -->
-            <link rel="stylesheet" href="../static/src/css/model_viewer.css" />
+            <link rel="stylesheet" href="/construction/static/src/css/model_viewer.css" />
         </xpath>
     </template>
 
