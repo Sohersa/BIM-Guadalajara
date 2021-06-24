@@ -6,10 +6,10 @@ odoo.define('construction.tree_all_concepts', (require) => {
 
     var project_data
     var current_data
-    var FORGE_CLIENT_ID = 'Fm4gdTcs80gl0iBf6qAezWNJHWpGpd4B';
-    var CLIENT_SECRET = '1cVuzApwsUzAZkG6';
+    var FORGE_CLIENT_ID = 'Nx9EOxCfvtMpgWo84zizuMdBoOAdlOVy';
+    var CLIENT_SECRET = 'vasZrgcsx9IMFlt5';
     var CURRENT_URN_OBJ = ''
-    var ACCOUNT_ID = '2026eedc-29c3-42ba-9494-bd277607af10';
+    var ACCOUNT_ID = 'f3328c25-3227-4d60-b700-1361473d4964';
     var _super;
     var scopes = 'data:read data:write data:create bucket:create bucket:read account:write account:read';
 
