@@ -96,7 +96,7 @@
                           </span>
                         </div>
                       </div>
-                      <ul class="nested">
+                      <!-- <ul class="nested">
                         <t t-foreach="item.childs" t-as="element">
                           <li>
                             <div class="row item-tree">
@@ -138,7 +138,7 @@
                             </div>
                           </li>
                         </t>
-                      </ul>
+                      </ul> -->
                     </li>
                   </ul>
                 </div>
