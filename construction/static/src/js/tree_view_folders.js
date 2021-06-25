@@ -147,6 +147,7 @@ odoo.define('construction.tree_all_objects', (require) => {
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 success: function (response) {
                     entity.getFolders(response.data[0].relationships.topFolders.links.related.href);
+                    console.log(response);
                 },
                 error: function (xmlHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
