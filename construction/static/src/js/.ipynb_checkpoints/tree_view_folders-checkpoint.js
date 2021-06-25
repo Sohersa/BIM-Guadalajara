@@ -143,7 +143,7 @@ odoo.define('construction.tree_all_objects', (require) => {
         getHubs() {
             $.ajax({
                 type: "GET",
-                url: "https://developer.api.autodesk.com/project/v1/hubs/"+HUB_ID,
+                url: "https://developer.api.autodesk.com/project/v1/hubs/"+HUB_ID+"/projects",
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 success: function (response) {
                     entity.getFolders(response.data[0].relationships.topFolders.links.related.href);
