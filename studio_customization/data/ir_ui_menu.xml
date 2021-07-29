@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.gastos_configuration_682b6363-9dd0-4e75-b385-d8c270c77b4d" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" eval="False"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Configuration</field>
+    <field name="parent_id" eval="False"/>
+    <field name="sequence">100</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" eval="False"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Lista de Alumnos</field>
+    <field name="parent_id" eval="False"/>
+    <field name="sequence">10</field>
+    <field name="web_icon">fa fa-file-o,#FFFFFF,#1abc9c</field>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_lis_b2dcfea9-7878-4241-b96e-e243064dc6ec" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.lista_cursos_528bad46-3979-4a18-a1e5-e74b4f466274"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Cursos</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_alu_132864e4-fdcd-4472-9466-4291524223e3" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.alumnos_b56b8741-d0e7-4716-9c6b-1b8e6a5b0da4"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Alumnos</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_lis_b2dcfea9-7878-4241-b96e-e243064dc6ec"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_con_6bad7c4b-0b71-407d-af4e-6aa4ed43fbd8" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" eval="False"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Configuración</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5"/>
+    <field name="sequence">2</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_con_aa363df8-aa19-48af-a3e9-6abf01b5d135" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.alumnos_tags_07531a88-8686-48c8-9ace-343f72648d38"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Alumnos Tags</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_con_6bad7c4b-0b71-407d-af4e-6aa4ed43fbd8"/>
+    <field name="sequence">10</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_est_44562dbe-840c-4a19-934e-d19e28364c3f" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.estadisticas_a4c8e673-99d7-4f7a-81dd-404b8892edf8"/>
+    <field name="active" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Estadísticas</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_est_d8b0a8a7-d976-4f10-a9cc-0f4f877f17f2" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.estadisticas_alumnos_5e18e77e-b435-4cc0-a64f-2d09471ea3d7"/>
+    <field name="active" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Estadísticas</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_est_e7cfaa80-edc0-4667-8650-4af59f7f8d7e" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.estadisticas_7938b0fb-b567-4164-ad37-f6369dc6432e"/>
+    <field name="active" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Estadísticas</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_alu_132864e4-fdcd-4472-9466-4291524223e3"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_lis_84dbbe14-b1e4-4b4c-bdd2-3945854aa128" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.lista_de_cursos_3b42f6e0-192a-4ecd-85cf-17154ceec064"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Lista de Cursos</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_lis_b2dcfea9-7878-4241-b96e-e243064dc6ec"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.lista_de_alumnos_tes_0f2d684d-521f-496e-a4f4-61493aa090c2" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.test_0eec0f03-98f6-4bd2-a973-93903137ca56"/>
+    <field name="active" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">test</field>
+    <field name="parent_id" ref="studio_customization.lista_de_alumnos_4ea89135-c1b0-4ae4-9f36-82c11cdf32f5"/>
+    <field name="sequence">4</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+</odoo>

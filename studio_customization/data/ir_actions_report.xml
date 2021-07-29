@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="sale.action_report_saleorder" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="sale.model_sale_order"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [ref('sales_team.group_sale_manager')])]"/>
+    <field name="model">sale.order</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Presupuesto / Pedido</field>
+    <field name="paperformat_id" eval="False"/>
+    <field name="report_name">sale.report_saleorder</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+  <record id="studio_customization.pedido_de_venta_repo_36e53270-dd21-4520-ae7b-3007ded3972c" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="sale.model_sale_order"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">sale.order</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Presupuesto / Modelado</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+    <field name="report_name">studio_customization.studio_report_docume_af2dbbbb-0a43-496b-b80e-c5c953b34e74</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.false_a25adec2-e102-43e5-b051-9ea71a1de302" model="ir.rule" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="domain_force" eval="False"/>
+    <field name="groups" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_allow_export'), ref('purchase.group_purchase_manager'), ref('sales_team.group_sale_manager'), ref('account.group_account_manager'), ref('product.group_product_variant'), ref('product.group_stock_packaging'), ref('base.group_system'), ref('sale.group_auto_done_setting'), ref('base.group_no_one'), ref('analytic.group_analytic_accounting'), ref('base.group_partner_manager'), ref('product.group_discount_per_so_line'), ref('sale.group_delivery_invoice_address'), ref('website.group_website_publisher'), ref('website.group_website_designer'), ref('purchase.group_send_reminder'), ref('analytic.group_analytic_tags'), ref('account.group_account_invoice'), ref('sale.group_proforma_sales'), ref('uom.group_uom'), ref('account.group_show_line_subtotals_tax_excluded'), ref('account.group_show_line_subtotals_tax_included'), ref('product.group_product_pricelist'), ref('product.group_sale_pricelist'), ref('account.group_account_user'), ref('account.group_account_readonly'), ref('crm.group_use_recurring_revenues'), ref('crm.group_use_lead'), ref('website.group_multi_website'), ref('base.group_multi_company'), ref('base.group_multi_currency'), ref('base.group_erp_manager'), ref('account_accountant.group_fiscal_year'), ref('account.group_cash_rounding'), ref('sale_management.group_sale_order_template'), ref('base.group_portal'), ref('base.group_public'), ref('account.group_purchase_receipts'), ref('account.group_sale_receipts'), ref('sale.group_warning_sale'), ref('purchase.group_warning_purchase'), ref('account.group_warning_account'), ref('purchase.group_purchase_user'), ref('base.group_user'), ref('sales_team.group_sale_salesman_all_leads'), ref('sales_team.group_sale_salesman')])]"/>
+    <field name="model_id" ref="studio_customization.notas_d93ebbe9-f776-4a01-b4e6-1e3915a542b2"/>
+    <field name="name" eval="False"/>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+  <record id="studio_customization.x_notas_1cd796e7-f725-43ba-b457-4d14c94c067b" model="ir.rule" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="domain_force" eval="False"/>
+    <field name="groups" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_allow_export'), ref('sales_team.group_sale_manager'), ref('purchase.group_purchase_manager'), ref('account.group_account_manager'), ref('product.group_product_variant'), ref('product.group_stock_packaging'), ref('base.group_system'), ref('sale.group_auto_done_setting'), ref('base.group_no_one'), ref('analytic.group_analytic_accounting'), ref('base.group_partner_manager'), ref('product.group_discount_per_so_line'), ref('sale.group_delivery_invoice_address'), ref('website.group_website_publisher'), ref('website.group_website_designer'), ref('purchase.group_send_reminder'), ref('analytic.group_analytic_tags'), ref('account.group_account_invoice'), ref('sale.group_proforma_sales'), ref('uom.group_uom'), ref('account.group_show_line_subtotals_tax_excluded'), ref('account.group_show_line_subtotals_tax_included'), ref('product.group_product_pricelist'), ref('product.group_sale_pricelist'), ref('account.group_account_user'), ref('account.group_account_readonly'), ref('crm.group_use_recurring_revenues'), ref('crm.group_use_lead'), ref('website.group_multi_website'), ref('base.group_multi_company'), ref('base.group_multi_currency'), ref('base.group_erp_manager'), ref('account_accountant.group_fiscal_year'), ref('account.group_cash_rounding'), ref('sale_management.group_sale_order_template'), ref('base.group_portal'), ref('base.group_public'), ref('account.group_purchase_receipts'), ref('account.group_sale_receipts'), ref('sale.group_warning_sale'), ref('purchase.group_warning_purchase'), ref('account.group_warning_account'), ref('purchase.group_purchase_user'), ref('base.group_user'), ref('sales_team.group_sale_salesman_all_leads'), ref('sales_team.group_sale_salesman')])]"/>
+    <field name="model_id" ref="studio_customization.notas_presupuesto_mo_3c212702-e0d7-41ef-9bdf-e47fa51191f2"/>
+    <field name="name">x_notas</field>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+</odoo>

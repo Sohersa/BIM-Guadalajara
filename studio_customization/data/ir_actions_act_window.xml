@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="contacts.action_contacts" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{'default_is_company': True}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+            Clic para agregar un contacto en tu directorio.
+          </p><p>
+            Odoo te ayuda a llevar el manejo de todas tus actividades relacionadas a un contacto.
+          </p>
+        ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Contactos</field>
+    <field name="res_model">res.partner</field>
+    <field name="search_view_id" ref="base.view_res_partner_filter"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,activity,graph</field>
+  </record>
+  <record id="studio_customization.alumnos_b56b8741-d0e7-4716-9c6b-1b8e6a5b0da4" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Alumnos</field>
+    <field name="res_model">x_alumnos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,map,kanban,graph,form</field>
+  </record>
+  <record id="studio_customization.alumnos_tags_07531a88-8686-48c8-9ace-343f72648d38" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Alumnos Tags</field>
+    <field name="res_model">x_alumnos_tag</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="studio_customization.estadisticas_7938b0fb-b567-4164-ad37-f6369dc6432e" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Estadísticas</field>
+    <field name="res_model">x_alumnos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,map</field>
+  </record>
+  <record id="studio_customization.estadisticas_a4c8e673-99d7-4f7a-81dd-404b8892edf8" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Estadísticas</field>
+    <field name="res_model">x_alumnos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,map</field>
+  </record>
+  <record id="studio_customization.estadisticas_alumnos_5e18e77e-b435-4cc0-a64f-2d09471ea3d7" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Estadisticas Alumnos</field>
+    <field name="res_model">x_estadisticas_alumnos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form,calendar,graph</field>
+  </record>
+  <record id="studio_customization.gastos_e20ab118-864b-4f90-a0e6-f13082598df9" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    This is your new action.
+                </p>
+                <p>By default, it contains a list and a form view and possibly
+                    other view types depending on the options you chose for your model.
+                </p>
+                <p>
+                    You can start customizing these screens by clicking on the Studio icon on the
+                    top right corner (you can also customize this help message there).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Gastos</field>
+    <field name="res_model">x_gastos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,calendar,gantt,map,pivot</field>
+  </record>
+  <record id="studio_customization.gastos_stages_d2d7e047-6d75-4010-84d5-31c14bec01f4" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    This is your new action.
+                </p>
+                <p>By default, it contains a list and a form view and possibly
+                    other view types depending on the options you chose for your model.
+                </p>
+                <p>
+                    You can start customizing these screens by clicking on the Studio icon on the
+                    top right corner (you can also customize this help message there).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Gastos Stages</field>
+    <field name="res_model">x_gastos_stage</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="studio_customization.lista_cursos_528bad46-3979-4a18-a1e5-e74b4f466274" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">lista cursos</field>
+    <field name="res_model">x_lista_cursos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form,calendar,pivot,graph</field>
+  </record>
+  <record id="studio_customization.lista_de_cursos_3b42f6e0-192a-4ecd-85cf-17154ceec064" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">Lista de Cursos</field>
+    <field name="res_model">x_lista_cursos</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form,calendar,pivot,graph</field>
+  </record>
+  <record id="studio_customization.presupuestos_e8c61dea-a64a-428b-a917-df3de063409c" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{'search_default_x_alumno': active_id,'default_x_alumno': active_id}</field>
+    <field name="domain">[('x_alumno', '=', active_id)]</field>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="limit">80</field>
+    <field name="name">Presupuestos</field>
+    <field name="res_model">sale.order</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="studio_customization.test_0eec0f03-98f6-4bd2-a973-93903137ca56" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
+                    Esta es tu nueva acción.
+                </p>
+                <p>Por defecto, contiene una lista y una vista de formulario y posiblemente
+                    otros tipos de vista dependiendo de las opciones que hayas elegido para tu modelo.
+                </p>
+                <p>
+                    Puedes empezar a personalizar estas pantallas haciendo clic en el icono de Studio en la
+                    esquina superior derecha (también puedes personalizar este mensaje de ayuda allí).
+                </p>
+            ]]></field>
+    <field name="limit">80</field>
+    <field name="name">test</field>
+    <field name="res_model">res.partner</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,map,activity</field>
+  </record>
+</odoo>

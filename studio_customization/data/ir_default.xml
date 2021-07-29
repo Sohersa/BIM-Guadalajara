@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.activo_alumnos_c1ca55d7-de8e-4fcc-9a29-1cc983455318" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.activo_alumnos_06e53143-4235-465e-98ac-5716c798f3eb"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.activo_estadisticas__af760195-8603-4dde-a874-5e4a20831cd5" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.activo_estadisticas__fb2ebc42-5418-4647-ac64-87cdea2bd803"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.activo_lista_cursos_1112ae8b-a2d8-458b-93ef-ce5b1fc22fba" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.activo_lista_cursos_06e50045-00a0-4dda-a21e-6121490a357d"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.cantidad_linea_de_pe_cd34defe-06fa-4ee0-b000-bc1c3a93b518" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="sale.field_sale_order_line__product_uom_qty"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"1.00"</field>
+  </record>
+  <record id="studio_customization.dinero_corriente_lis_c079dbf4-7309-4342-8336-d0eddb39584c" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.dinero_corriente_lis_107f7955-7657-4e5d-9822-d0c3bb9a67e4"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">33</field>
+  </record>
+  <record id="studio_customization.new_entero_product_t_21c9e232-d0ad-4832-8c5e-d10699aa6997" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_entero_product_t_ee1a5a96-dce8-484c-b994-57ae18ccce92"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">""</field>
+  </record>
+  <record id="studio_customization.new_entero_product_t_26780d13-6a9c-430c-a37a-97d832a644e8" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_entero_product_t_3a28cf9b-fed1-44eb-90a1-087fb0d86bef"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_entero_sales_ord_2282efdc-96b7-4771-975b-9aa609f9090b" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_entero_sales_ord_410e1835-9e33-4af9-a1a0-d8dc527e9772"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_entero_sales_ord_2890d87d-c7ab-40f0-be9a-c0d0bbfcadb2" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_entero_sales_ord_f20e2120-479a-463c-b849-78a86491e7c3"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">""</field>
+  </record>
+  <record id="studio_customization.new_entero_sales_ord_3b46cef2-a198-4d41-bf7d-d1afd2df3ad4" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_entero_sales_ord_4dbebb32-c16e-4de0-947c-da5aa30cc7fb"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">""</field>
+  </record>
+  <record id="studio_customization.secuencia_alumnos_b78c0612-0490-4845-876c-a8babde72201" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.secuencia_alumnos_53e9efaa-d80a-4971-9173-55834fc0de95"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+  <record id="studio_customization.secuencia_estadistic_43714a63-ad5d-4dc4-8eb2-7bfafdce542f" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.secuencia_estadistic_c88af096-48e6-46e5-91f2-9ac9689f08f4"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+  <record id="studio_customization.secuencia_lista_curs_4fab3ca5-7ae8-42d6-9075-ae0d6d5f3d6e" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.secuencia_lista_curs_dfe388a2-f828-457a-858e-3ce426299bd9"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+  <record id="studio_customization.sequence_gastos_stag_66cc1a18-53f6-4bc6-b5ad-b4c0114d4e81" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.sequence_gastos_stag_3100e252-1edb-4ff1-b9ad-82f2a9ea5aec"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+  <record id="studio_customization.valor_cursos_016f1216-d8a9-4e3b-b361-24e0d1a8c8e3" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.valor_lista_cursos_c2d0b2a2-456a-4c09-9834-f9ccaed6f143"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+</odoo>
