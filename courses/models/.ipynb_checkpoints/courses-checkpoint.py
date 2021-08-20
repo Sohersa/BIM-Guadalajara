@@ -1,4 +1,4 @@
--*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 
 from odoo import models, fields, api
 
@@ -6,7 +6,9 @@ from odoo import models, fields, api
 class courses(models.Model):
     _name = 'courses.courses'
     _description = 'courses.courses'
+    
     name = fields.Char()
+    
     value = fields.Integer()
     value2 = fields.Float(compute="_value_pc", store=True)
     description = fields.Text()
