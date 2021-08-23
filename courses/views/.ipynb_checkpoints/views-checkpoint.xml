@@ -17,7 +17,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="courses.action_window">
-      <field name="name">courses window</field>
+      <field name="name">Courses</field>
       <field name="res_model">courses.courses</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -41,19 +41,26 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="courses" id="courses.menu_root"/>
+    <menuitem name="Courses" id="courses.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="courses.menu_1" parent="courses.menu_root"/>
-    <menuitem name="Menu 2" id="courses.menu_2" parent="courses.menu_root"/>
+    <menuitem name="Courses" id="courses.menu_courses" parent="courses.menu_root"/>
+    <menuitem name="Generations" id="courses.menu_gens" parent="courses.menu_root"/>
+    <menuitem name="Students" id="courses.menu_students" parent="courses.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="courses.menu_2" parent="courses.menu_root"/> -->
 
     <!-- actions -->
 
-    <menuitem name="List" id="courses.menu_1_list" parent="courses.menu_1"
+    <menuitem name="List" id="courses.menu_courses_list" parent="courses.menu_courses"
               action="courses.action_window"/>
-    <menuitem name="Server to list" id="courses" parent="courses.menu_2"
-              action="courses.action_server"/>
+    <menuitem name="List" id="courses.menu_gens_list" parent="courses.menu_gens"
+              action="courses.action_window"/>
+    <menuitem name="List" id="courses.menu_students_list" parent="courses.menu_students_list"
+              action="courses.action_window"/>
+      
+    <!-- <menuitem name="Server to list" id="courses" parent="courses.menu_2"
+              action="courses.action_server"/> -->
 
   </data>
 </odoo>
