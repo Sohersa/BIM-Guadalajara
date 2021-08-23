@@ -56,7 +56,7 @@
               action="courses.action_window"/>
     <menuitem name="List" id="courses.menu_gens_list" parent="courses.menu_gens"
               action="courses.action_window"/>
-    <menuitem name="List" id="courses.menu_students_list" parent="courses.menu_students_list"
+    <menuitem name="List" id="courses.menu_students_list" parent="courses.menu_students"
               action="courses.action_window"/>
       
     <!-- <menuitem name="Server to list" id="courses" parent="courses.menu_2"
