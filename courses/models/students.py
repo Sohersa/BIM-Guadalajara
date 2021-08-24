@@ -21,7 +21,7 @@ class students(models.Model):
     origin = fields.Selection([
         ('company', 'Empresa'),
         ('individual', 'Individual'),
-        string="Origen"
+        "Origen"
     ])
     
     generation_id = fields.Many2one(related='courses.generations', string="Generación")
