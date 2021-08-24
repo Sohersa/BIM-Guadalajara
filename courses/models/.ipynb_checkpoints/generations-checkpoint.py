@@ -13,14 +13,14 @@ class generations(models.Model):
     students_count = fields.Integer(string="Alumnos")
     in_course_count = fields.Integer(string="Cursando")
     pending_project_total = fields.Integer(string="Proyecto Pendiente")
-    approved_count = fields.Integer(string="Aprovado")
-    failed_count = fields.Integer(string="Reprovado")
+    approved_count = fields.Integer(string="Aprobado")
+    failed_count = fields.Integer(string="Reprobado")
     
     #Generation category
     category = fields.Selection([('public', 'Público'), 
                                  ('c_company', 'Personalziado Empresa'),
                                  ('contracted', 'Contratado'),
-                                 "Categoría"
+                                 'Categoría'
                                 ])
     
     #relational field to courses model
