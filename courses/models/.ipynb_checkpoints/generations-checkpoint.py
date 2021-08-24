@@ -20,7 +20,7 @@ class generations(models.Model):
     category = fields.Selection([('public', 'Público'), 
                                  ('c_company', 'Personalziado Empresa'),
                                  ('contracted', 'Contratado'),
-                                 string="Categoría"
+                                 "Categoría"
                                 ])
     
     #relational field to courses model
