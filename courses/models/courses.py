@@ -5,15 +5,19 @@ from odoo import models, fields, api
 
 class courses(models.Model):
     _name = 'courses.courses'
-    _description = 'courses.courses'
+    _description = 'Courses'
     
     name = fields.Char()
     
-    value = fields.Integer()
-    value2 = fields.Float(compute="_value_pc", store=True)
-    description = fields.Text()
-
-    @api.depends('value')
-    def _value_pc(self):
-        for record in self:
-            record.value2 = float(record.value) / 100
+    #Generations count computed field
+    generations_count = fields.Integer(string="Generaciones", readonly="true")
+    
+    #Total counters for every course
+    students_total = fields.Integer(string="Alumnos")
+    in_course_total = fields.Integer(string="Cursando")
+    pending_project_total = fields.Integer(string="Proyecto Pendiente")
+    approved_total = fields.Integer(string="Aprovados")
+    failed_total = fields.Integer(string="Reprobados")
+    
+    #Relational field to generations model
+    generations_ids = fields.One2many('courses.generations', 'course_id', required="true", string="Generaciones")

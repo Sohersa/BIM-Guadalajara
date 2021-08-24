@@ -1,0 +1,30 @@
+#-*- coding: utf-8 -*-
+
+from odoo import models, fields, api
+
+
+class generations(models.Model):
+    _name = "courses.generations"
+    _description = "Generations"
+    
+    name = fields.Char()
+    
+    #Counter fields for every student status
+    students_count = fields.Integer(string="Alumnos")
+    in_course_count = fields.Integer(string="Cursando")
+    pending_project_total = fields.Integer(string="Proyecto Pendiente")
+    approved_count = fields.Integer(string="Aprovado")
+    failed_count = fields.Integer(string="Reprovado")
+    
+    #Generation category
+    category = fields.Selection([('public', 'Público'), 
+                                 ('c_company', 'Personalziado Empresa'),
+                                 ('contracted', 'Contratado'),
+                                 string="Categoría"
+                                ])
+    
+    #relational field to courses model
+    course_id = fields.Many2one('courses.courses', string="Curso")
+    
+    #relational field to students model
+    students_ids = fields.One2many('courses.students', 'generation_id', string="Alumnos")
