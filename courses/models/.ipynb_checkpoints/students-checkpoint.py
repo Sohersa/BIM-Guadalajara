@@ -23,6 +23,6 @@ class students(models.Model):
 #         'Origen'
 #     ])
     
-    generation_id = fields.Many2one(related='courses.generations', string="Generación")
+    generation_id = fields.Many2one('courses.generations', related='courses.generations', string="Generación")
     
     diploma = fields.Binary("Suba su Archivo")
