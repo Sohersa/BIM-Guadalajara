@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 class students(models.Model):
-    
+    _inherit="res.partner"
     _name = "courses.students"
     _description = "Students"
         
