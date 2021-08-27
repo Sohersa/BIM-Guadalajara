@@ -18,7 +18,7 @@
 
 
     <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="courses.action_window">
+    <record model="ir.actions.act_window" id="courses_action_window">
       <field name="name">Courses</field>
       <field name="res_model">courses.course</field>
       <field name="view_mode">tree,form</field>
@@ -27,7 +27,7 @@
 
     <!-- server action to the one above -->
 
-     <record model="ir.actions.server" id="courses.action_server">
+     <record model="ir.actions.server" id="courses_action_server">
       <field name="name">courses server</field>
       <field name="model_id" ref="model_courses_course"/>
       <field name="state">code</field>
@@ -43,11 +43,11 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="Courses" id="courses.menu_root"/>
+    <menuitem name="Courses" id="courses_menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Courses" id="courses.menu_courses" parent="courses.menu_root"/>
+    <menuitem name="Courses" id="courses.menu_courses" parent="courses_menu_root"/>
     <!-- <menuitem name="Menu 2" id="courses.menu_2" parent="courses.menu_root"/> -->
 
     <!-- actions -->
