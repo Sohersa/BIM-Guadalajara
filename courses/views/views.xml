@@ -7,8 +7,11 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="students_total"/>
+          <field name="in_course_total"/>
+          <field name="pending_project_total"/>
+          <field name="approved_total"/>
+          <field name="failed_total"/>
         </tree>
       </field>
     </record>
@@ -25,7 +28,7 @@
 
     <!-- server action to the one above -->
 
-    <record model="ir.actions.server" id="courses.action_server">
+    <!-- <record model="ir.actions.server" id="courses.action_server">
       <field name="name">courses server</field>
       <field name="model_id" ref="model_courses_course"/>
       <field name="state">code</field>
@@ -36,7 +39,7 @@
           "res_model": model._name,
         }
       </field>
-    </record>
+    </record> -->
 
 
     <!-- Top menu item -->
