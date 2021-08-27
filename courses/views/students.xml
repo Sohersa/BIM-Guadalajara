@@ -20,7 +20,7 @@
         </record>
 
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="students.action_window">
+        <record model="ir.actions.act_window" id="students_action_window">
           <field name="name">Students</field>
           <field name="res_model">courses.student</field>
           <field name="view_mode">tree,form</field>
@@ -28,7 +28,7 @@
         
         <!-- Top menu item -->
 
-        <menuitem name="Students" id="students.menu_root"/>
+        <menuitem name="Students" id="students_menu_root"/>
 
         <!-- menu categories -->
         <!--<menuitem name="Students" id="courses.menu_students" parent="courses.menu_root"/>-->

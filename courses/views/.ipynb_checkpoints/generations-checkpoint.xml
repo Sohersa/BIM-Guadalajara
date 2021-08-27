@@ -14,7 +14,7 @@
         </record>
 
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="generations.action_window">
+        <record model="ir.actions.act_window" id="generations_action_window">
           <field name="name">Generations</field>
           <field name="res_model">courses.generation</field>
           <field name="view_mode">tree,form</field>
@@ -22,7 +22,7 @@
         
         <!-- Top menu item -->
 
-        <menuitem name="Generations" id="generations.menu_root"/>
+        <menuitem name="Generations" id="generations_menu_root"/>
 
         <!-- menu categories -->
         <!--<menuitem name="Generations" id="courses.menu_gens" parent="courses.menu_root"/>-->
