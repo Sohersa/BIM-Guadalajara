@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="generations.list">
+          <field name="name">generations list</field>
+          <field name="model">courses.generation</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="course_id"/>
+              <field name="students_count"/>
+            </tree>
+          </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="generations.action_window">
+          <field name="name">Generations</field>
+          <field name="res_model">courses.generation</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- Top menu item -->
+
+        <menuitem name="Generations" id="generations.menu_root"/>
+
+        <!-- menu categories -->
+        <!--<menuitem name="Generations" id="courses.menu_gens" parent="courses.menu_root"/>-->
+        
+    </data>
+</odoo>

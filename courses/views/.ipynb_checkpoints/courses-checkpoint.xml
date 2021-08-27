@@ -18,7 +18,6 @@
 
 
     <!-- actions opening views on models -->
-
     <record model="ir.actions.act_window" id="courses.action_window">
       <field name="name">Courses</field>
       <field name="res_model">courses.course</field>
@@ -28,7 +27,7 @@
 
     <!-- server action to the one above -->
 
-    <!-- <record model="ir.actions.server" id="courses.action_server">
+     <record model="ir.actions.server" id="courses.action_server">
       <field name="name">courses server</field>
       <field name="model_id" ref="model_courses_course"/>
       <field name="state">code</field>
@@ -39,7 +38,7 @@
           "res_model": model._name,
         }
       </field>
-    </record> -->
+    </record>
 
 
     <!-- Top menu item -->
@@ -49,18 +48,12 @@
     <!-- menu categories -->
 
     <menuitem name="Courses" id="courses.menu_courses" parent="courses.menu_root"/>
-    <menuitem name="Generations" id="courses.menu_gens" parent="courses.menu_root"/>
-    <menuitem name="Students" id="courses.menu_students" parent="courses.menu_root"/>
     <!-- <menuitem name="Menu 2" id="courses.menu_2" parent="courses.menu_root"/> -->
 
     <!-- actions -->
 
-    <menuitem name="List" id="courses.menu_courses_list" parent="courses.menu_courses"
-              action="courses.action_window"/>
-    <menuitem name="List" id="courses.menu_gens_list" parent="courses.menu_gens"
-              action="courses.action_window"/>
-    <menuitem name="List" id="courses.menu_students_list" parent="courses.menu_students"
-              action="courses.action_window"/>
+    <!-- menuitem name="List" id="courses.menu_courses_list" parent="courses.menu_courses"
+              action="courses.action_window"/> -->
       
     <!-- <menuitem name="Server to list" id="courses" parent="courses.menu_2"
               action="courses.action_server"/> -->
