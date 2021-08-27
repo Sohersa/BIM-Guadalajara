@@ -53,7 +53,7 @@
     <!-- actions -->
 
     <menuitem name="List" id="courses_menu_courses_list" parent="courses_menu_courses"
-              action="courses.action_window"/>
+              action="courses_action_window"/>
       
     <!-- <menuitem name="Server to list" id="courses" parent="courses.menu_2"
               action="courses.action_server"/> -->
