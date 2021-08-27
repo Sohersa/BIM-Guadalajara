@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class courses(models.Model):
-    _name = 'courses.courses'
+    _name = 'courses.course'
     _description = 'Courses'
     
     name = fields.Char()
@@ -20,11 +20,11 @@ class courses(models.Model):
     failed_total = fields.Integer(string="Reprobados")
     
     #Relational field to generations model
-    generations_ids = fields.One2many('courses.generations', 'course_id', required="true", string="Generaciones")
+    generations_ids = fields.One2many('courses.generation', 'course_id', required="true", string="Generaciones")
     
     
 class generations(models.Model):
-    _name = "courses.generations"
+    _name = "courses.generation"
     _description = "Generations"
     
     name = fields.Char()
@@ -47,10 +47,10 @@ class generations(models.Model):
     course_id = fields.Many2one('courses.courses', string="Curso")
     
     #relational field to students model
-    students_ids = fields.One2many('courses.students', 'generation_id', string="Alumnos")
+    student_ids = fields.One2many('courses.student', 'generation_id', string="Alumnos")
     
 class students(models.Model):
-    _name = "courses.students"
+    _name = "courses.student"
     _description = "Students"
         
     #Partner fields related to student
@@ -70,6 +70,6 @@ class students(models.Model):
 #         'Origen'
 #     ])
     
-    generation_id = fields.Many2one('courses.generations', related='courses.generations', string="Generación")
+    generation_id = fields.Many2one('courses.generation', string="Generación")
     
     diploma = fields.Binary("Suba su Archivo")
