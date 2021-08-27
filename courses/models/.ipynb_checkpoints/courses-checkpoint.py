@@ -20,4 +20,4 @@ class courses(models.Model):
     failed_total = fields.Integer(string="Reprobados")
     
     #Relational field to generations model
-    generations_ids = fields.One2many('courses.generations', 'course_id', required="true", string="Generaciones")
+    generations_ids = fields.One2many('courses.generations', 'Curso', required="true", string="Generaciones")

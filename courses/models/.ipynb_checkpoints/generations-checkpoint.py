@@ -24,7 +24,7 @@ class generations(models.Model):
 #                                 ])
     
     #relational field to courses model
-    #course_id = fields.Many2one('courses.courses', string="Curso")
+    course_id = fields.Many2one('courses.courses', string="Curso")
     
     #relational field to students model
     students_ids = fields.One2many('courses.students', 'generation_id', string="Alumnos")
