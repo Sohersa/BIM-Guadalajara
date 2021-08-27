@@ -10,8 +10,8 @@ class Courses(http.Controller):
     @http.route('/courses/course/objects/', auth='public')
     def list(self, **kw):
         return http.request.render('courses.listing', {
-            'root': '/courses/courses',
-            'objects': http.request.env['courses.courses'].search([]),
+            'root': '/courses/course',
+            'objects': http.request.env['courses.course'].search([]),
          })
 
     @http.route('/courses/course/objects/<model("courses.course"):obj>/', auth='public')

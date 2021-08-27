@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- explicit list view definition -->
-        <record model="ir.ui.view" id="generations.list">
-          <field name="name">generations list</field>
-          <field name="model">courses.generation</field>
+        <record model="ir.ui.view" id="students_list">
+          <field name="name">students list</field>
+          <field name="model">courses.student</field>
           <field name="arch" type="xml">
             <tree>
               <field name="partner_id"/>
@@ -20,9 +20,9 @@
         </record>
 
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="generations.action_window">
-          <field name="name">Generations</field>
-          <field name="res_model">courses.generation</field>
+        <record model="ir.actions.act_window" id="students.action_window">
+          <field name="name">Students</field>
+          <field name="res_model">courses.student</field>
           <field name="view_mode">tree,form</field>
         </record>
         
