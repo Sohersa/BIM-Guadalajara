@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="courses.list">
       <field name="name">courses list</field>
-      <field name="model">courses.courses</field>
+      <field name="model">courses.course</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -18,7 +18,7 @@
 
     <record model="ir.actions.act_window" id="courses.action_window">
       <field name="name">Courses</field>
-      <field name="res_model">courses.courses</field>
+      <field name="res_model">courses.course</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -27,7 +27,7 @@
 
     <record model="ir.actions.server" id="courses.action_server">
       <field name="name">courses server</field>
-      <field name="model_id" ref="model_courses_courses"/>
+      <field name="model_id" ref="model_courses_course"/>
       <field name="state">code</field>
       <field name="code">
         action = {
