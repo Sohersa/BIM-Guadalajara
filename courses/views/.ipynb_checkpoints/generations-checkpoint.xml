@@ -22,8 +22,10 @@
         
         <!-- Top menu item -->
 
-
+        <menuitem name="Generations" id="generations_menu_root"/>
+        
         <!-- menu categories -->
+        <menuitem name="Generations" id="courses_menu_gens" parent="generations_menu_root"/>
         
     </data>
 </odoo>
