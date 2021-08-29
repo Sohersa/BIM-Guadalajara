@@ -24,7 +24,6 @@
 
 
         <!-- menu categories -->
-        <menuitem name="Generations" id="courses_menu_gens" parent="generations_menu_root"/>
         
     </data>
 </odoo>

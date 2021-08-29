@@ -30,7 +30,6 @@
 
 
         <!-- menu categories -->
-        <menuitem name="Students" id="courses_menu_students" parent="generations_menu_root"/>
         
     </data>
 </odoo>    
