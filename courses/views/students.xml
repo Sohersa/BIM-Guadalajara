@@ -33,5 +33,8 @@
         <!-- menu categories -->
         <menuitem name="Students" id="courses_menu_students" parent="generations_menu_root"/>
         
+        <menuitem name="List" id="courses_menu_gens_list" parent="courses_menu_students"
+              action="courses_action_window"/>
+        
     </data>
 </odoo>    

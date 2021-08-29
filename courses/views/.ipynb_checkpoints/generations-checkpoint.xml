@@ -27,5 +27,8 @@
         <!-- menu categories -->
         <menuitem name="Generations" id="courses_menu_gens" parent="generations_menu_root"/>
         
+        
+        <menuitem name="List" id="courses_menu_gens_list" parent="courses_menu_gens"
+              action="courses_action_window"/>
     </data>
 </odoo>
