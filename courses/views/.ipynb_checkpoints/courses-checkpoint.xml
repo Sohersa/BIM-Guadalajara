@@ -44,16 +44,22 @@
     <!-- Top menu item -->
 
     <menuitem name="Courses" id="courses_menu_root"/>
+    <menuitem name="Generations" id="generations_menu_root"/>
+    <menuitem name="Students" id="students_menu_root"/>
 
     <!-- menu categories -->
 
     <menuitem name="Courses" id="courses_menu_courses" parent="courses_menu_root"/>
+    <menuitem name="Generations" id="courses_menu_gens" parent="generations_menu_root"/>
+    <menuitem name="Students" id="courses_menu_students" parent="generations_menu_root"/>
+      
+      
     <!-- <menuitem name="Menu 2" id="courses.menu_2" parent="courses.menu_root"/> -->
 
     <!-- actions -->
 
-    <menuitem name="List" id="courses_menu_courses_list" parent="courses_menu_courses"
-              action="courses_action_window"/>
+    <!-- <menuitem name="List" id="courses_menu_courses_list" parent="courses_menu_courses"
+              action="courses_action_window"/> -->
       
     <!-- <menuitem name="Server to list" id="courses" parent="courses.menu_2"
               action="courses.action_server"/> -->
