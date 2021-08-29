@@ -31,7 +31,7 @@
         <menuitem name="Students" id="students_menu_root"/>
 
         <!-- menu categories -->
-        <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root"/>
+        <menuitem name="Students" id="courses_menu_students" parent="generations_menu_root"/>
         
     </data>
 </odoo>    
