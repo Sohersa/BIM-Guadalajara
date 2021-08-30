@@ -51,6 +51,7 @@ class generations(models.Model):
     
 class students(models.Model):
     _name = "courses.student"
+    _inherit="res.partner"
     _description = "Students"
         
     #Partner fields related to student
