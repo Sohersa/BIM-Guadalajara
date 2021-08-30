@@ -24,17 +24,16 @@
           <field name="name">Students</field>
           <field name="res_model">courses.student</field>
           <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Esta generación no tiene alumnos. Agregue uno.</p>
+          </field>
         </record>
         
         <!-- Top menu item -->
         <menuitem name="Students" id="students_menu_root"/>
 
-
         <!-- menu categories -->
-        <menuitem name="Students" id="courses_menu_students" parent="generations_menu_root"/>
-        
-        <menuitem name="List" id="courses_menu_gens_list" parent="courses_menu_students"
-              action="courses_action_window"/>
+        <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
         
     </data>
 </odoo>    
