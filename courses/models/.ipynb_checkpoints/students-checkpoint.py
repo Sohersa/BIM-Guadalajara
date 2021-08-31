@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class students(models.Model):
-    _name = "courses.student"
+    _name = "courses.students"
     _description = "Students"
         
     #Partner fields related to student

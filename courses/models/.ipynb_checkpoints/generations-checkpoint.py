@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class generations(models.Model):
-    _name = "courses.generation"
+    _name = "courses.generations"
     _description = "Generations"
     
     name = fields.Char()
@@ -27,5 +27,5 @@ class generations(models.Model):
     course_id = fields.Many2one('courses.courses', string="Curso")
     
     #relational field to students model
-    student_ids = fields.One2many('courses.student', 'generation_id', string="Alumnos")
+    student_ids = fields.One2many('courses.students', 'generation_id', string="Alumnos")
     

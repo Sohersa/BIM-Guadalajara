@@ -4,13 +4,13 @@ from odoo import models, fields, api
 
 
 class courses(models.Model):
-    _name = 'courses.course'
+    _name = 'courses.courses'
     _description = 'Courses'
     
     name = fields.Char()
     
     #Generations count computed field
-    generations_count = fields.Integer(string="Generaciones", readonly="true")
+    generations_count = fields.Integer(string="Cantidad de Generaciones", readonly="true")
     
     #Total counters for every course
     students_total = fields.Integer(string="Alumnos")
@@ -20,6 +20,4 @@ class courses(models.Model):
     failed_total = fields.Integer(string="Reprobados")
     
     #Relational field to generations model
-    generations_ids = fields.One2many('courses.generation', 'course_id', required="true", string="Generaciones")
-    
-    
+    generations_ids = fields.One2many('courses.generations', 'course_id', string="Generaciones")
