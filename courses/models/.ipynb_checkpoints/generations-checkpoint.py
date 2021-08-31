@@ -17,11 +17,11 @@ class generations(models.Model):
     failed_count = fields.Integer(string="Reprobado")
     
     #Generation category
-#     category = fields.Selection([('public', 'Público'), 
-#                                  ('c_company', 'Personalziado Empresa'),
-#                                  ('contracted', 'Contratado'),
-#                                  'Categoría'
-#                                 ])
+    category = fields.Selection([('public', 'Público'), 
+                                 ('c_company', 'Personalziado Empresa'),
+                                 ('contracted', 'Contratado'),
+                                 'Categoría'
+                                ])
     
     #relational field to courses model
     course_id = fields.Many2one('courses.courses', string="Curso")

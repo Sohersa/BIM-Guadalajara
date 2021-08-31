@@ -18,11 +18,11 @@ class students(models.Model):
     partner_function = fields.Char(related='partner_id.function', string="Puesto de Trabajo", store="True")
     partner_title = fields.Many2one('res.partner', related='partner_id.title', string="Profesión", store="True")
     
-#     origin = fields.Selection([
-#         ('company', 'Empresa'),
-#         ('individual', 'Individual'),
-#         'Origen'
-#     ])
+    origin = fields.Selection([
+        ('company', 'Empresa'),
+        ('individual', 'Individual'),
+        'Origen'
+    ])
     
     generation_id = fields.Many2one('courses.generation', string="Generación")
     
