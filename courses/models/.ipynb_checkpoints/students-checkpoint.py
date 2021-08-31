@@ -4,11 +4,12 @@ from odoo import models, fields, api
 
 
 class students(models.Model):
+    _name = "courses.students"
     _description = "Students"
-    _inherit = "res.partner"
+    #_inherit = "res.partner"
         
     #Partner fields related to student
-#     partner_id = fields.Many2one('res.partner', string="Contacto")
+    partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
 #     partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", widget="phone", store="True")
 #     partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", widget="email", store="True")        
