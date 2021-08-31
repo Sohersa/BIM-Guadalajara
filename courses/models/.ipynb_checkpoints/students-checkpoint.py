@@ -20,9 +20,8 @@ class students(models.Model):
     
     origin = fields.Selection([
         ('company', 'Empresa'),
-        ('individual', 'Individual'),
-        'Origen'
-    ])
+        ('individual', 'Individual')]
+        ,'Origen')
     
     generation_id = fields.Many2one('courses.generation', string="Generación")
     
