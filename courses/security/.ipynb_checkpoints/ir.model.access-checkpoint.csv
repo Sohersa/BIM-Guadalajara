@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_courses_course,courses.course,model_courses_course,base.group_user,1,1,1,1
-access_courses_generation,courses.generation,model_courses_generation,base.group_user,1,1,1,1
-access_courses_student,courses.student,model_courses_student,base.group_user,1,1,1,1
+access_courses_courses,courses.courses,model_courses_courses,base.group_user,1,1,1,1
+access_courses_generations,courses.generations,model_courses_generations,base.group_user,1,1,1,1
+access_courses_students,courses.students,model_courses_students,base.group_user,1,1,1,1
