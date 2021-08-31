@@ -4,7 +4,7 @@
     <!-- tree views -->
     <record model="ir.ui.view" id="courses_list">
       <field name="name">courses list</field>
-      <field name="model">courses.course</field>
+      <field name="model">courses.courses</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -21,7 +21,7 @@
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="courses_list_window">
       <field name="name">Courses</field>
-      <field name="res_model">courses.course</field>
+      <field name="res_model">courses.courses</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">No hay ningún curso. Agregue uno.</p>

@@ -3,12 +3,13 @@
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="generations_list">
           <field name="name">generations list</field>
-          <field name="model">courses.generation</field>
+          <field name="model">courses.generations</field>
           <field name="arch" type="xml">
             <tree>
               <field name="name"/>
               <field name="course_id"/>
               <field name="students_count"/>
+              <field name="category"/>
             </tree>
           </field>
         </record>
@@ -16,7 +17,7 @@
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" id="generations_action_window">
           <field name="name">Generations</field>
-          <field name="res_model">courses.generation</field>
+          <field name="res_model">courses.generations</field>
           <field name="view_mode">tree,form</field>
           <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Este curso no tiene generaciones. Cree una.</p>

@@ -3,7 +3,7 @@
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="students_list">
           <field name="name">students list</field>
-          <field name="model">courses.student</field>
+          <field name="model">courses.students</field>
           <field name="arch" type="xml">
             <tree>
               <field name="partner_id"/>
@@ -15,6 +15,7 @@
               <field name="partner_title"/>
               <field name="partner_company"/>
               <field name="generation_id"/>
+              <field name="origin"/>
             </tree>
           </field>
         </record>
@@ -22,7 +23,7 @@
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" id="students_action_window">
           <field name="name">Students</field>
-          <field name="res_model">courses.student</field>
+          <field name="res_model">courses.students</field>
           <field name="view_mode">tree,form</field>
           <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Esta generación no tiene alumnos. Agregue uno.</p>
