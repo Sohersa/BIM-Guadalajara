@@ -1,5 +1,25 @@
 <odoo>
     <data>
+
+        <!-- form view -->
+        <record model="ir.ui.view" id="generations_form_view">
+          <field name="name">courses.generations.view.form</field>
+          <field name="model">courses.generations</field>
+          <field name="arch" type="xml">
+            <form>
+              <header/>
+              <sheet string="Generaciones">
+                  <field class="oe_avatar" widget="image" name="photo"/>
+                  <div class="oe_title">
+                      <h1>
+                          <field name="name" required="1" placeholder="Nombre..."/>
+                      </h1>
+                  </div>
+              </sheet>
+            </form>
+          </field>
+        </record>
+
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="generations_list">
           <field name="name">generations list</field>
