@@ -17,6 +17,8 @@
             </div>
             <group string="Generaciones">
               <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+            </group>
+            <group>
               <field name="generations_count" string="Total de Generaciones:"/>
             </group>
             <group>
