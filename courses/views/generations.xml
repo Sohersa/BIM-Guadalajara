@@ -9,7 +9,6 @@
             <form>
               <header/>
               <sheet string="Generaciones">
-                  <field class="oe_avatar" widget="image" name="photo"/>
                   <div class="oe_title">
                       <h1>
                           <field name="name" required="1" placeholder="Nombre..."/>
