@@ -24,7 +24,7 @@ class students(models.Model):
         ('individual', 'Individual')]
         ,'Origen')
     
-    generation_id = fields.Many2one('courses.generation', string="Generación")
+    generation_id = fields.Many2one('courses.generations', string="Generación")
     
     diploma = fields.Binary("Suba su Archivo")
     channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
