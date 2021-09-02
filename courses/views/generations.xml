@@ -15,7 +15,6 @@
                       </h1>
                   </div>
               </sheet>
-            </form>
               <group>
                   <group>
                       <field name="course_id"/>
@@ -44,6 +43,7 @@
                     </group>
                   </page>
               </notebook>
+            </form>
           </field>
         </record>
 
