@@ -63,7 +63,6 @@
         </record>
 
 
-
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" id="students_action_window">
           <field name="name">Students</field>
@@ -74,12 +73,10 @@
           </field>
         </record>
 
-
-
         <!-- Top menu item -->
         <menuitem name="Students" id="students_menu_root" string="Alumnos"/>
 
         <!-- menu categories -->
         <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
     </data>
-</odoo>    
+</odoo>
