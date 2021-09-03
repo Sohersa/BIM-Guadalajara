@@ -1,5 +1,50 @@
 <odoo>
     <data>
+        <!-- form view -->
+        <record model="ir.ui.view" id="generations_form_view">
+          <field name="name">courses.students.view.form</field>
+          <field name="model">courses.students</field>
+          <field name="arch" type="xml">
+            <form>
+              <header/>
+              <sheet string="Alumnos">
+                  <div class="oe_title">
+                      <h1>
+                          <field name="name" required="1" placeholder="Nombre..."/>
+                      </h1>
+                  </div>
+                  <group string="Información de Contacto">
+                      <group>
+                          <field name="partner_id"/>
+                          <field name="email"/>
+                          <field name="phone"/>
+                          <field name="company"/>
+                      </group>
+                      <group>
+                          <!-- <field name="title"/> -->
+                          <field name="function"/>
+                          <field name="country"/>
+                          <field name="city"/>
+                      </group>
+                  </group>
+                  <group>
+                      <group>
+                          <field name="generation_id"/>
+                      </group>
+                      <group>
+                          <field name="origin"/>
+                      </group>
+                  </group>
+                  <group>
+                      <field name="diploma"/>
+                  </group>
+                  <group>
+                      <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+                  </group>
+              </sheet>
+            </form>
+          </field>
+        </record>
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="students_list">
           <field name="name">students list</field>

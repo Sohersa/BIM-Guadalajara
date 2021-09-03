@@ -9,15 +9,16 @@ class courses(models.Model):
     
     name = fields.Char()
     notes = fields.Text()
+
     #Generations count computed field
     generations_count = fields.Integer(string="Cantidad de Generaciones", readonly="true")
 
     #Total counters for every course
-    students_total = fields.Integer(string="Alumnos")
-    in_course_total = fields.Integer(string="Cursando")
-    pending_project_total = fields.Integer(string="Proyecto Pendiente")
-    approved_total = fields.Integer(string="Aprovados")
-    failed_total = fields.Integer(string="Reprobados")
+    students_total = fields.Integer(string="Alumnos", readonly="1")
+    in_course_total = fields.Integer(string="Cursando", readonly="1")
+    pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
+    approved_total = fields.Integer(string="Aprovados", readonly="1")
+    failed_total = fields.Integer(string="Reprobados", readonly="1")
 
     #photo for course
     photo = fields.Image(string="Foto", help="Foto de curso")
