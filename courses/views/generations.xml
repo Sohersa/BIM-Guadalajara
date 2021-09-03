@@ -75,7 +75,7 @@
         </record>
 
         <!-- menu categories -->
-        <menuitem name="Generations" id="courses_menu_gens" parent="courses_menu_root" action="generations_action_window"/>
+        <menuitem name="Generaciones" id="courses_menu_gens" parent="courses_menu_root" action="generations_action_window"/>
 
     </data>
 </odoo>
