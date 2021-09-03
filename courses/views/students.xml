@@ -96,11 +96,11 @@
     </record>
 
     <!-- Top menu item -->
-    <menuitem name="Students" id="students_menu_root"/>
+    <menuitem name="Alumnos" id="students_menu_root" parent="courses_menu_root"/>
 
     <!-- menu categories -->
-    <menuitem name="Alumnos" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
-    <menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window"/>
+    <menuitem name="Lista" id="courses_menu_students" parent="students_menu_root" action="students_action_window"/>
+    <menuitem name="Grupos" id="courses_menu_groups" parent="students_menu_root" action="groups_action_window"/>
 
   </data>
 </odoo>
