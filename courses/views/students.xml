@@ -22,7 +22,7 @@
                       </group>
                       <group>
                           <!-- <field name="title"/> -->
-                          <field name="fpartner_unction"/>
+                          <field name="partner_function"/>
                           <field name="partner_country"/>
                           <field name="partner_city"/>
                       </group>
