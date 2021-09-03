@@ -92,10 +92,10 @@
     </record> -->
 
     <!-- Top menu item -->
-    <menuitem name="Students" id="students_menu_root" string="Alumnos" sequence="2"/>
+    <menuitem name="Students" id="students_menu_root" string="Alumnos"/>
 
     <!-- menu categories -->
     <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
-    <menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window" sequence="0"/>
+    <!--<menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window"/>-->
 
 </odoo>    

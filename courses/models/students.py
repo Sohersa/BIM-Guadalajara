@@ -36,11 +36,11 @@ class students(models.Model):
 
     group_id = fields.Many2one('courses.students.groups', string="Grupo")
 
-    diploma = fields.Binary("Suba su Archivo")
+    diploma = fields.Binary("Diploma")
     #channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
 
 class student_group(models.Model):
-    _name = "courses.students.groups"
+    _name = "courses.student_groups"
     _description = "Student Groups"
 
     name = fields.Char(string="Nombre", store="True")
