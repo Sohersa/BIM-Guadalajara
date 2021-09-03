@@ -16,15 +16,15 @@
                   <group string="Información de Contacto">
                       <group>
                           <field name="partner_id"/>
-                          <field name="email"/>
-                          <field name="phone"/>
-                          <field name="company"/>
+                          <field name="partner_email"/>
+                          <field name="partner_phone"/>
+                          <field name="partner_company"/>
                       </group>
                       <group>
                           <!-- <field name="title"/> -->
-                          <field name="function"/>
-                          <field name="country"/>
-                          <field name="city"/>
+                          <field name="fpartner_unction"/>
+                          <field name="partner_country"/>
+                          <field name="partner_city"/>
                       </group>
                   </group>
                   <group>
