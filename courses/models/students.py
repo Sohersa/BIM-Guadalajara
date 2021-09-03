@@ -24,6 +24,13 @@ class students(models.Model):
         ('company', 'Empresa'),
         ('individual', 'Individual')]
         ,'Origen')
+
+    state = fields.Selection([
+        ('in_course', 'Cursando'),
+        ('pending_project', 'Proyecto Pendiente'),
+        ('aprobado', 'Aprobado'),
+        ('reprobado', 'Reprobado')]
+        , 'Estado Académico')
     
     generation_id = fields.Many2one('courses.generations', string="Generación")
 
