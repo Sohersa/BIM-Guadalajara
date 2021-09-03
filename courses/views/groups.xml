@@ -23,8 +23,6 @@
           </field>
         </record>
 
-        <!-- menu categories -->
-        <menuitem name="Students" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window"/>
-
+        <menuitem name="Students" id="courses_menu_root" string="Cursos" sequence="0"/>
     </data>
 </odoo>

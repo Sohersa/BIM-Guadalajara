@@ -30,9 +30,10 @@
                   <group>
                       <group>
                           <field name="generation_id"/>
-                          <field name="state"/>
+                          <field name="group_id"/>
                       </group>
                       <group>
+                          <field name="state"/>
                           <field name="origin"/>
                       </group>
                   </group>
@@ -69,12 +70,22 @@
             <p class="o_view_nocontent_smiling_face">Esta generación no tiene alumnos. Agregue uno.</p>
           </field>
         </record>
+
+        <record model="ir.actions.act_window" id="groups_action_window">
+          <field name="name">Groups</field>
+          <field name="res_model">courses.courses.students</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No hay grupos. Agregue uno.</p>
+          </field>
+        </record>
         
         <!-- Top menu item -->
-        <menuitem name="Students" id="students_menu_root"/>
+        <menuitem name="Students" id="students_menu_root" string="Alumnos" sequence="2"/>
 
         <!-- menu categories -->
         <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
-        
+        <menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window"/>
+
     </data>
 </odoo>    
