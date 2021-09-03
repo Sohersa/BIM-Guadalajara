@@ -1,103 +1,101 @@
 <odoo>
-    <data>
-        <!-- form view -->
-        <record model="ir.ui.view" id="generations_form_view">
-          <field name="name">courses.students.view.form</field>
-          <field name="model">courses.students</field>
-          <field name="arch" type="xml">
-            <form>
-              <header/>
-              <sheet string="Alumnos">
-                  <div class="oe_title">
-                      <h1>
-                          <field name="name" required="1" placeholder="Nombre..."/>
-                      </h1>
-                  </div>
-                  <group string="Información de Contacto">
-                      <group>
-                          <field name="partner_id"/>
-                          <field name="partner_email"/>
-                          <field name="partner_phone"/>
-                          <field name="partner_company"/>
-                      </group>
-                      <group>
-                          <!-- <field name="title"/> -->
-                          <field name="partner_function"/>
-                          <field name="partner_country"/>
-                          <field name="partner_city"/>
-                      </group>
+    <!-- form view -->
+    <record model="ir.ui.view" id="generations_form_view">
+      <field name="name">courses.students.view.form</field>
+      <field name="model">courses.students</field>
+      <field name="arch" type="xml">
+        <form>
+          <header/>
+          <sheet string="Alumnos">
+              <div class="oe_title">
+                  <h1>
+                      <field name="name" required="1" placeholder="Nombre..."/>
+                  </h1>
+              </div>
+              <group string="Información de Contacto">
+                  <group>
+                      <field name="partner_id"/>
+                      <field name="partner_email"/>
+                      <field name="partner_phone"/>
+                      <field name="partner_company"/>
                   </group>
                   <group>
-                      <group>
-                          <field name="generation_id"/>
-                          <field name="group_id"/>
-                      </group>
-                      <group>
-                          <field name="state"/>
-                          <field name="origin"/>
-                      </group>
+                      <!-- <field name="title"/> -->
+                      <field name="partner_function"/>
+                      <field name="partner_country"/>
+                      <field name="partner_city"/>
+                  </group>
+              </group>
+              <group>
+                  <group>
+                      <field name="generation_id"/>
+                      <field name="group_id"/>
                   </group>
                   <group>
-                      <field name="diploma"/>
+                      <field name="state"/>
+                      <field name="origin"/>
                   </group>
-                  <group>
-                      <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
-                  </group>
-              </sheet>
-            </form>
-          </field>
-        </record>
-        <!-- explicit list view definition -->
-        <record model="ir.ui.view" id="students_list">
-          <field name="name">students list</field>
-          <field name="model">courses.students</field>
-          <field name="arch" type="xml">
-            <tree>
-              <field name="name"/>
-              <field name="generation_id"/>
-              <field name="origin"/>
-              <field name="diploma"/>
-            </tree>
-          </field>
-        </record>
+              </group>
+              <group>
+                  <field name="diploma"/>
+              </group>
+              <group>
+                  <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="students_list">
+      <field name="name">students list</field>
+      <field name="model">courses.students</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="generation_id"/>
+          <field name="origin"/>
+          <field name="diploma"/>
+        </tree>
+      </field>
+    </record>
 
-        <record model="ir.ui.view" id="groups_list">
-          <field name="name">groups list</field>
-          <field name="model">courses.students.groups</field>
-          <field name="arch" type="xml">
-            <tree>
-              <field name="name"/>
-              <field name="partner_id"/>
-              <field name="generation_id"/>
-            </tree>
-          </field>
-        </record>
+    <record model="ir.ui.view" id="groups_list">
+      <field name="name">groups list</field>
+      <field name="model">courses.students.groups</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="partner_id"/>
+          <field name="generation_id"/>
+        </tree>
+      </field>
+    </record>
 
-        <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="students_action_window">
-          <field name="name">Students</field>
-          <field name="res_model">courses.students</field>
-          <field name="view_mode">tree,form</field>
-          <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">Esta generación no tiene alumnos. Agregue uno.</p>
-          </field>
-        </record>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="students_action_window">
+      <field name="name">Students</field>
+      <field name="res_model">courses.students</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Esta generación no tiene alumnos. Agregue uno.</p>
+      </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="groups_action_window">
-          <field name="name">Groups</field>
-          <field name="res_model">courses.courses.students</field>
-          <field name="view_mode">tree,form</field>
-          <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">No hay grupos. Agregue uno.</p>
-          </field>
-        </record>
-        
-        <!-- Top menu item -->
-        <menuitem name="Students" id="students_menu_root" string="Alumnos" sequence="2"/>
+    <record model="ir.actions.act_window" id="groups_action_window">
+      <field name="name">Groups</field>
+      <field name="res_model">courses.courses.students</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">No hay grupos. Agregue uno.</p>
+      </field>
+    </record>
 
-        <!-- menu categories -->
-        <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
-        <menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window" sequence="0"/>
+    <!-- Top menu item -->
+    <menuitem name="Students" id="students_menu_root" string="Alumnos" sequence="2"/>
 
-    </data>
+    <!-- menu categories -->
+    <menuitem name="Students" id="courses_menu_students" parent="courses_menu_root" action="students_action_window"/>
+    <menuitem name="Groups" id="courses_menu_groups" parent="courses_menu_students" action="groups_action_window" sequence="0"/>
+
 </odoo>    
