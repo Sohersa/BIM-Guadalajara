@@ -6,8 +6,8 @@ from odoo import models, fields, api
 class students(models.Model):
     _name = "courses.students"
     _description = "Students"
-    #_inherit = "res.partner"
-        
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     #Partner fields related to student
     partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
@@ -42,6 +42,7 @@ class students(models.Model):
 class student_group(models.Model):
     _name = "courses.student_groups"
     _description = "Student Groups"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
     cant_students = fields.Integer(string="Alumnos")
