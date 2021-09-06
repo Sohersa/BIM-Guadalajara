@@ -166,7 +166,7 @@ odoo.define('construction.model_select_widget', (require) => {
                 url: "https://developer.api.autodesk.com/project/v1/hubs/" + HUB_ID + "/projects",
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 success: function (response) {
-                    instance.getFolders(response.data[0].relationships.topFolders.links.related.href);
+                    instance.getFolders(response.data[11].relationships.topFolders.links.related.href);
                 },
                 error: function (xmlHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);

@@ -146,7 +146,7 @@ odoo.define('construction.tree_all_objects', (require) => {
                 url: "https://developer.api.autodesk.com/project/v1/hubs/"+HUB_ID+"/projects",
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 success: function (response) {
-                    entity.getFolders(response.data[0].relationships.topFolders.links.related.href);
+                    entity.getFolders(response.data[11].relationships.topFolders.links.related.href);
                     console.log(response);
                 },
                 error: function (xmlHttpRequest, textStatus, errorThrown) {

@@ -250,7 +250,7 @@ odoo.define('construction.tree_all_concepts', (require) => {
                 },
                 success: function (response) {
                     console.log(response);
-                    let encodeString = btoa(response.items[0].objectId);
+                    let encodeString = btoa(response.items[11].objectId);
                     encodeString = encodeString.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=+$/, '');
                     CURRENT_URN_OBJ = encodeString;
                     console.log(encodeString);
