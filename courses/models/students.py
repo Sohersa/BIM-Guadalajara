@@ -42,7 +42,7 @@ class students(models.Model):
 class student_group(models.Model):
     _name = "courses.student_groups"
     _description = "Student Groups"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
     cant_students = fields.Integer(string="Alumnos")
