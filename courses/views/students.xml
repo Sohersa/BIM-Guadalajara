@@ -57,7 +57,7 @@
       <!-- GROUP form view -->
     <record model="ir.ui.view" id="generations_form_view">
       <field name="name">courses.students.groups.view.form</field>
-      <field name="model">courses.students_groups</field>
+      <field name="model">courses.student_groups</field>
       <field name="arch" type="xml">
         <form>
           <header/>
