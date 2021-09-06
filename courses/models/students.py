@@ -45,8 +45,13 @@ class student_group(models.Model):
     #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
-    cant_students = fields.Integer(string="Alumnos")
+    students_count = fields.Integer(string="Alumnos", readonly="1")
+    in_course_count = fields.Integer(string="Cursando", readonly="1")
+    pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
+    approved_count = fields.Integer(string="Aprobados", readonly="1")
+    failed_count = fields.Integer(string="Reprobados", readonly="1")
 
     partner_id = fields.Many2one('res.partner', string="Representante")
+
     generation_id = fields.Many2one('courses.generations', string="Curso")
     student_ids = fields.One2many('courses.students', 'group_id', string="Alumnos")
