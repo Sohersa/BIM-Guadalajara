@@ -8,11 +8,11 @@ odoo.define('construction.model_viewer_widget', (require) => {
     var utils = new Utils();
 
     //ENVIROMENT VARIABLES
-    var FORGE_CLIENT_ID = 'Nx9EOxCfvtMpgWo84zizuMdBoOAdlOVy';
-    var CLIENT_SECRET = 'X8d9e54488ba54a8';
+    var FORGE_CLIENT_ID = 'O8CQRpIAqrN31GjfXGSSKYcEqBnAW0Lw';
+    var CLIENT_SECRET = 'S3w5Z4QOGDJhc5SU';
     var CURRENT_URN_OBJ = ''
-    var ACCOUNT_ID = 'f3328c25-3227-4d60-b700-1361473d4964';
-    var HUB_ID = 'b.f3328c25-3227-4d60-b700-1361473d4964';
+    var ACCOUNT_ID = 'c1d6b654-74cc-4521-a55a-0d426e4ed133';
+    var HUB_ID = 'b.c1d6b654-74cc-4521-a55a-0d426e4ed133';
 
     //CONTROL VARIABLES
     var access_token = '';
