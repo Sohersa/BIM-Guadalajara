@@ -9,7 +9,7 @@ odoo.define('construction.model_select_widget', (require) => {
 
     //ENVIROMENT VARIABLES
     var FORGE_CLIENT_ID = 'Nx9EOxCfvtMpgWo84zizuMdBoOAdlOVy';
-    var CLIENT_SECRET = 'vasZrgcsx9IMFlt5';
+    var CLIENT_SECRET = 'X8d9e54488ba54a8';
     var CURRENT_URN_OBJ = ''
     var ACCOUNT_ID = 'f3328c25-3227-4d60-b700-1361473d4964';
     var HUB_ID = 'b.f3328c25-3227-4d60-b700-1361473d4964';
