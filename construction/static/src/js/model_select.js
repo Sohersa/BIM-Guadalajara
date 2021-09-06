@@ -181,6 +181,7 @@ odoo.define('construction.model_select_widget', (require) => {
                 success: function (response) {
 
                     var folders = response.data.filter(item => item.attributes.name == 'Project Files' || item.attributes.name == 'Plans');
+                    console.log(folders)
                     folders.forEach(item => {
                         var data_item = {
                             name: item.attributes.name,

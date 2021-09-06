@@ -161,6 +161,7 @@ odoo.define('construction.tree_all_objects', (require) => {
                 headers: { 'Authorization': 'Bearer ' + access_token },
                 success: function (response) {
                     var folders = response.data.filter(item => item.attributes.name == 'Project Files'|| item.attributes.name == 'Plans');
+                    console.log(folders)
                     folders.forEach(item => {
                         var data_item = {
                             name: item.attributes.name,
