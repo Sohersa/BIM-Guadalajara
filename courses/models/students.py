@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class students(models.Model):
     _name = "courses.students"
     _description = "Students"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     #Partner fields related to student
     partner_id = fields.Many2one('res.partner', string="Contacto")

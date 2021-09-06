@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class generations(models.Model):
     _name = "courses.generations"
     _description = "Generations"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char()
     notes = fields.Text()
