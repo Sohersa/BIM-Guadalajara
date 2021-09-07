@@ -27,22 +27,22 @@
                       <field name="partner_country"/>
                       <field name="partner_city"/>
                   </group>
-              </group>
-              <group>
                   <group>
-                      <field name="generation_id"/>
-                      <field name="group_id"/>
+                      <group>
+                          <field name="generation_id"/>
+                          <field name="group_id"/>
+                      </group>
+                      <group>
+                          <field name="state"/>
+                          <field name="origin"/>
+                      </group>
                   </group>
                   <group>
-                      <field name="state"/>
-                      <field name="origin"/>
+                      <field name="diploma"/>
                   </group>
-              </group>
-              <group>
-                  <field name="diploma"/>
-              </group>
-              <group>
-                  <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+                  <group>
+                      <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+                  </group>
               </group>
           </sheet>
           <!-- <div class="oe_chatter" name="oe_chatter">

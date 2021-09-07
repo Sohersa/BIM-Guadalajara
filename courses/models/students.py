@@ -34,7 +34,7 @@ class students(models.Model):
     
     generation_id = fields.Many2one('courses.generations', string="Generación")
 
-    group_id = fields.Many2one('courses.students.groups', string="Grupo")
+    group_id = fields.Many2one('courses.student_groups', string="Grupo")
 
     diploma = fields.Binary("Diploma")
     #channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
