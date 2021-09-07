@@ -6,15 +6,17 @@ from odoo import models, fields, api
 class generations(models.Model):
     _name = "courses.generations"
     _description = "Generations"
-    
+    #_inherit = ['mail.thread', 'mail.activity.mixin']
+
     name = fields.Char()
-    
+    notes = fields.Text()
+
     #Counter fields for every student status
-    students_count = fields.Integer(string="Alumnos")
-    in_course_count = fields.Integer(string="Cursando")
-    pending_project_total = fields.Integer(string="Proyecto Pendiente")
-    approved_count = fields.Integer(string="Aprobado")
-    failed_count = fields.Integer(string="Reprobado")
+    students_count = fields.Integer(string="Alumnos", readonly="1")
+    in_course_count = fields.Integer(string="Cursando", readonly="1")
+    pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
+    approved_count = fields.Integer(string="Aprobados", readonly="1")
+    failed_count = fields.Integer(string="Reprobados", readonly="1")
     
     #Generation category
     category = fields.Selection([('public', 'Público'), 
@@ -26,5 +28,5 @@ class generations(models.Model):
     course_id = fields.Many2one('courses.courses', string="Curso")
     
     #relational field to students model
-    student_ids = fields.One2many('courses.students', 'generation_id', string="Alumnos")
+    student_ids = fields.One2many('courses.students', 'generation_id', nolabel="1")
     

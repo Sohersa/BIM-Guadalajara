@@ -11,8 +11,8 @@ class students(models.Model):
     #Partner fields related to student
     partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
-    partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", widget="phone", store="True")
-    partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", widget="email", store="True")
+    partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", store="True")
+    partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", store="True")
     partner_country = fields.Many2one('res.country', related='partner_id.country_id', string="País", store="True")
     partner_company = fields.Many2one('res.partner', related='partner_id.parent_id', string="Empresa", store="True")
     partner_city = fields.Char(related='partner_id.city', string="Ciudad", store="True")
