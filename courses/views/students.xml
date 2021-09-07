@@ -54,38 +54,6 @@
       </field>
     </record>
 
-      <!-- GROUP form view -->
-    <record model="ir.ui.view" id="generations_form_view">
-      <field name="name">courses.students.groups.view.form</field>
-      <field name="model">courses.student_groups</field>
-      <field name="arch" type="xml">
-        <form>
-          <header/>
-          <sheet string="Grupos">
-              <div class="oe_title">
-                  <h1>
-                      <field name="name" required="1" placeholder="Nombre..."/>
-                  </h1>
-              </div>
-              <group>
-                  <field name="partner_id" string="Representante"/>
-                  <field name="generation_id"/>
-              </group>
-              <group>
-                  <field name="student_ids"/>
-                  <field name="students_count"/>
-              </group>
-              <group string="Información de Alumnos">
-                  <field name="in_course_count"/>
-                  <field name="pending_project_total"/>
-                  <field name="approved_count"/>
-                  <field name="failed_count"/>
-              </group>
-          </sheet>
-        </form>
-      </field>
-    </record>
-
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="students_list">
       <field name="name">students list</field>
