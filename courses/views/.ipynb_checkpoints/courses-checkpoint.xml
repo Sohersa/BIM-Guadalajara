@@ -1,6 +1,39 @@
 <odoo>
   <data>
-      
+
+    <!-- form views -->
+    <record model="ir.ui.view" id="courses_form_view">
+      <field name="name">courses.courses.view.form</field>
+      <field name="model">courses.courses</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet string="Cursos">
+            <field class="oe_avatar" widget="image" name="photo"/>
+            <div class="oe_title">
+                <h1>
+                    <field name="name" required="1" placeholder="Nombre..."/>
+                </h1>
+            </div>
+            <group string="Generaciones">
+              <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+            </group>
+            <group>
+              <field name="generations_count" string="Total de Generaciones:"/>
+            </group>
+            <group>
+              <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+            </group>
+          </sheet>
+          <!--<div class="oe_chatter" name="oe_chatter">
+            <field name="message_follower_ids" id="message_follower_ids"/>
+            <field name="message_ids" id="message_ids"/>
+            <field name="activity_ids" id="activity_ids"/>
+          </div> -->
+        </form>
+      </field>
+    </record>
+
+
     <!-- tree views -->
     <record model="ir.ui.view" id="courses_list">
       <field name="name">courses list</field>
@@ -32,7 +65,7 @@
     <menuitem name="Courses" id="courses_menu_root"/>
 
     <!-- menu categories -->
-    <menuitem name="Courses" id="courses_menu_courses" parent="courses_menu_root" action="courses_list_window"/>
+    <menuitem name="Cursos" id="courses_menu_courses" parent="courses_menu_root" action="courses_list_window"/>
 
   </data>
 </odoo>
