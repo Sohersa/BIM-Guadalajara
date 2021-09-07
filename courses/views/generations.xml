@@ -14,40 +14,7 @@
                           <field name="name" required="1" placeholder="Nombre..."/>
                       </h1>
                   </div>
-                  <group>
-                      <group>
-                          <field name="course_id"/>
-                      </group>
-                      <group>
-                          <field name="category"/>
-                      </group>
-                  </group>
-                  <notebook>
-                      <page string="Lista de Alumnos">
-                        <group>
-                            <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
-                        </group>
-                      </page>
-                      <page string="Información">
-                        <group>
-                            <group>
-                                <field name="students_count"/>
-                            </group>
-                            <group>
-                                <field name="in_course_count"/>
-                                <field name="pending_project_total"/>
-                                <field name="approved_count"/>
-                                <field name="failed_count"/>
-                            </group>
-                        </group>
-                      </page>
-                  </notebook>
               </sheet>
-              <!-- <div class="oe_chatter" name="oe_chatter">
-                <field name="message_follower_ids" id="message_follower_ids"/>
-                <field name="message_ids" id="message_ids"/>
-                <field name="activity_ids" id="activity_ids"/>
-              </div> -->
             </form>
           </field>
         </record>

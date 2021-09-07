@@ -45,7 +45,8 @@ class student_group(models.Model):
     #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
-    students_count = fields.Integer(string="Alumnos", readonly="1")
+
+    students_count = fields.Integer(string="Cantidad Alumnos", readonly="1")
     in_course_count = fields.Integer(string="Cursando", readonly="1")
     pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
     approved_count = fields.Integer(string="Aprobados", readonly="1")
