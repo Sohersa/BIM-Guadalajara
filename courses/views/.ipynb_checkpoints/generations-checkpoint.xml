@@ -7,7 +7,6 @@
           <field name="model">courses.generations</field>
           <field name="arch" type="xml">
             <form>
-              <header/>
               <sheet string="Generaciones">
                   <div class="oe_title">
                       <h1>
