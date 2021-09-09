@@ -28,4 +28,4 @@ class generations(models.Model):
     
     #relational field to students model
     student_ids = fields.One2many('courses.students', 'generation_id', nolabel="1")
-    
+

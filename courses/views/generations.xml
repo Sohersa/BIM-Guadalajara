@@ -1,5 +1,18 @@
 <odoo>
     <data>
+    <!-- explicit list view definition -->
+      <record model="ir.ui.view" id="generations_list">
+        <field name="name">generations list</field>
+        <field name="model">courses.generations</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="course_id"/>
+            <field name="students_count"/>
+            <field name="category"/>
+          </tree>
+        </field>
+      </record>
 
     <!-- form view -->
       <record model="ir.ui.view" id="generations_form_view">
@@ -18,39 +31,25 @@
               </group>
               <group>
                 <field name="category"/>
-                </group>
-                <notebook>
-                  <page string="Lista de Alumnos">
-                    <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
-                  </page>
-                  <page string="Información">
-                    <group>
-                      <field name="students_count"/>
-                    </group>
-                    <group>
-                      <field name="in_course_count"/>
-                      <field name="pending_project_total"/>
-                      <field name="approved_count"/>
-                      <field name="failed_count"/>
-                    </group>
-                  </page>
-                </notebook>
+              </group>
+              <notebook>
+                <page string="Lista de Alumnos">
+                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                </page>
+                <page string="Información">
+                  <group>
+                    <field name="students_count"/>
+                  </group>
+                  <group>
+                    <field name="in_course_count"/>
+                    <field name="pending_project_total"/>
+                    <field name="approved_count"/>
+                    <field name="failed_count"/>
+                  </group>
+                </page>
+              </notebook>
             </sheet>
           </form>
-        </field>
-      </record>
-
-    <!-- explicit list view definition -->
-      <record model="ir.ui.view" id="generations_list">
-        <field name="name">generations list</field>
-        <field name="model">courses.generations</field>
-        <field name="arch" type="xml">
-          <tree>
-            <field name="name"/>
-            <field name="course_id"/>
-            <field name="students_count"/>
-            <field name="category"/>
-          </tree>
         </field>
       </record>
 
