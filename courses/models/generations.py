@@ -9,7 +9,7 @@ class generations(models.Model):
     #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char()
-    notes = fields.Text()
+    #notes = fields.Text()
 
     #Counter fields for every student status
     students_count = fields.Integer(string="Alumnos", readonly="1")

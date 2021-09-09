@@ -35,9 +35,6 @@
                     </group>
                   </page>
                 </notebook>
-                <group>
-                  <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
-                </group>
             </sheet>
           </form>
         </field>
