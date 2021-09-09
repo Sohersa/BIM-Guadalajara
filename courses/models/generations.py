@@ -21,8 +21,7 @@ class generations(models.Model):
     #Generation category
     category = fields.Selection([('public', 'Público'), 
                                  ('c_company', 'Personalziado Empresa'),
-                                 ('contracted', 'Contratado')],
-                                 'Categoría')
+                                 ('contracted', 'Contratado')], 'Categoría')
     
     #relational field to courses model
     course_id = fields.Many2one('courses.courses', string="Curso")

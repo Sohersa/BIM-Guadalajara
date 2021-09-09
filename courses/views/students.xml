@@ -137,6 +137,5 @@
     <!-- menu categories -->
     <menuitem name="Lista" id="courses_menu_students" parent="students_menu_root" action="students_action_window"/>
     <menuitem name="Grupos" id="courses_menu_groups" parent="students_menu_root" action="groups_action_window"/>
-
   </data>
 </odoo>
