@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class generations(models.Model):
+class Generations(models.Model):
     _name = "courses.generations"
     _description = "Generations"
     #_inherit = ['mail.thread', 'mail.activity.mixin']
@@ -27,5 +27,5 @@ class generations(models.Model):
     course_id = fields.Many2one('courses.courses', string="Curso")
     
     #relational field to students model
-    student_ids = fields.One2many('courses.students', 'generation_id', nolabel="1")
+    student_ids = fields.One2many('courses.students', 'generation_id')
 

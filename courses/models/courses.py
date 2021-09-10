@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class courses(models.Model):
+class Courses(models.Model):
     _name = 'courses.courses'
     _description = 'Courses'
     #_inherit = ['mail.thread', 'mail.activity.mixin']

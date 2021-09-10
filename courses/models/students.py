@@ -3,12 +3,12 @@
 from odoo import models, fields, api
 
 
-class students(models.Model):
+class Students(models.Model):
     _name = "courses.students"
     _description = "Students"
-    #_inherit = ['mail.thread', 'mail.activity.mixin']
+#   _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    #Partner fields related to student
+#   Partner fields related to student
     partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
     notes = fields.Text()
@@ -38,12 +38,14 @@ class students(models.Model):
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
 
     diploma = fields.Binary("Diploma")
-    #channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
+#   channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
 
-class student_group(models.Model):
+
+class StudentGroup(models.Model):
+
     _name = "courses.student_groups"
     _description = "Student Groups"
-    #_inherit = ['mail.thread', 'mail.activity.mixin']
+#   _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
 
