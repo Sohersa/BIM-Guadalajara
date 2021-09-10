@@ -17,11 +17,13 @@
             <group string="Generaciones">
               <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
                 <form>
-                  <field name="students_count" invisible="True"/>
-                  <field name="in_course_count" invisible="True"/>
-                  <field name="pending_project_total" invisible="True"/>
-                  <field name="approved_count" invisible="True"/>
-                  <field name="failed_count" invisible="True"/>
+                  <group>
+                    <field name="students_count" invisible="True"/>
+                    <field name="in_course_count" invisible="True"/>
+                    <field name="pending_project_total" invisible="True"/>
+                    <field name="approved_count" invisible="True"/>
+                    <field name="failed_count" invisible="True"/>
+                  </group>
                 </form>
               </field>
             </group>
@@ -41,6 +43,16 @@
       </field>
     </record>
 
+    <!-- search view -->
+    <record model="ir.ui.view" id="courses_search_view">
+        <field name="name">courses.courses.view.search</field>
+        <field name="model">courses.courses</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 
     <!-- tree views -->
     <record model="ir.ui.view" id="courses_list">

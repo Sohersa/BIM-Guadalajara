@@ -2,7 +2,7 @@
   <data>
 
       <!-- STUDENT form view -->
-    <record model="ir.ui.view" id="generations_form_view">
+    <record model="ir.ui.view" id="students_form_view">
       <field name="name">courses.students.view.form</field>
       <field name="model">courses.students</field>
       <field name="arch" type="xml">
@@ -84,7 +84,29 @@
         </form>
       </field>
     </record>
-      
+
+      <!-- STUDENT search view -->
+    <record model="ir.ui.view" id="students_search_view">
+        <field name="name">courses.students.view.search</field>
+        <field name="model">courses.students</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+      <!-- GROUP search view -->
+    <record model="ir.ui.view" id="groups_search_view">
+        <field name="name">courses.student.groups.view.search</field>
+        <field name="model">courses.student_groups</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="students_list">
       <field name="name">students list</field>

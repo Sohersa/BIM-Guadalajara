@@ -1,18 +1,5 @@
 <odoo>
     <data>
-    <!-- explicit list view definition -->
-      <record model="ir.ui.view" id="generations_list">
-        <field name="name">generations list</field>
-        <field name="model">courses.generations</field>
-        <field name="arch" type="xml">
-          <tree>
-            <field name="name"/>
-            <field name="course_id"/>
-            <field name="students_count"/>
-            <field name="category"/>
-          </tree>
-        </field>
-      </record>
 
     <!-- form view -->
       <record model="ir.ui.view" id="generations_form_view">
@@ -55,6 +42,20 @@
           </form>
         </field>
       </record>
+    <!-- explicit list view definition -->
+      <record model="ir.ui.view" id="generations_list">
+        <field name="name">generations list</field>
+        <field name="model">courses.generations</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="course_id"/>
+            <field name="students_count"/>
+            <field name="category"/>
+          </tree>
+        </field>
+      </record>
+
 
     <!-- actions opening views on models -->
       <record model="ir.actions.act_window" id="generations_action_window">
