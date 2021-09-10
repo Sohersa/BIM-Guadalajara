@@ -15,10 +15,7 @@
                 </h1>
             </div>
             <group string="Generaciones">
-              <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
-            </group>
-            <group>
-              <field name="generations_count" string="Total de Generaciones:">
+              <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
                 <form>
                   <field name="students_count" invisible="True"/>
                   <field name="in_course_count" invisible="True"/>
@@ -27,6 +24,9 @@
                   <field name="failed_count" invisible="True"/>
                 </form>
               </field>
+            </group>
+            <group>
+              <field name="generations_count" string="Total de Generaciones:"/>
             </group>
             <group>
               <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
