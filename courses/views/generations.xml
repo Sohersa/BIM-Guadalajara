@@ -34,7 +34,7 @@
               </group>
               <notebook>
                 <page string="Lista de Alumnos">
-                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                  <field name="student_ids" force_save="True" attrs="{}" on_change="1"/>
                 </page>
                 <page string="Información">
                   <group>
@@ -48,6 +48,9 @@
                   </group>
                 </page>
               </notebook>
+              <group>
+                <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+              </group>
             </sheet>
           </form>
         </field>

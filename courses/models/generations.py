@@ -9,7 +9,6 @@ class Generations(models.Model):
     #_inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char()
-    #notes = fields.Text()
 
     #Counter fields for every student status
     students_count = fields.Integer(string="Alumnos", readonly="1")
@@ -17,15 +16,17 @@ class Generations(models.Model):
     pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
     approved_count = fields.Integer(string="Aprobados", readonly="1")
     failed_count = fields.Integer(string="Reprobados", readonly="1")
-    
+
     #Generation category
-    category = fields.Selection([('public', 'Público'), 
+    category = fields.Selection([('public', 'Público'),
                                  ('c_company', 'Personalziado Empresa'),
                                  ('contracted', 'Contratado')], 'Categoría')
-    
+
     #relational field to courses model
     course_id = fields.Many2one('courses.courses', string="Curso")
-    
+
     #relational field to students model
     student_ids = fields.One2many('courses.students', 'generation_id')
+    
+    notes = fields.Text()
 
