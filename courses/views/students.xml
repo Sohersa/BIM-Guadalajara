@@ -13,20 +13,22 @@
                       <field name="name" required="1" placeholder="Nombre..."/>
                   </h1>
               </div>
-              <group string="Información de Contacto">
-                  <group>
-                      <field name="partner_id"/>
-                      <field name="partner_email"/>
-                      <field name="partner_phone"/>
-                      <field name="partner_company"/>
-                  </group>
-                  <group>
-                      <!-- <field name="title"/> -->
-                      <field name="partner_function"/>
-                      <field name="partner_country"/>
-                      <field name="partner_city"/>
-                  </group>
-                  <group>
+              <notebook>
+                  <page string="Contacto">
+                      <group>
+                          <field name="partner_id"/>
+                          <field name="partner_email"/>
+                          <field name="partner_phone"/>
+                          <field name="partner_company"/>
+                      </group>
+                      <group>
+                          <!-- <field name="title"/> -->
+                          <field name="partner_function"/>
+                          <field name="partner_country"/>
+                          <field name="partner_city"/>
+                      </group>
+                  </page>
+                  <page string="Información Académica">
                       <group>
                           <field name="generation_id"/>
                           <field name="group_id"/>
@@ -35,13 +37,13 @@
                           <field name="state"/>
                           <field name="origin"/>
                       </group>
-                  </group>
-                  <group>
-                      <field name="diploma"/>
-                  </group>
-                  <group>
-                      <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
-                  </group>
+                      <group>
+                          <field name="diploma"/>
+                      </group>
+                  </page>
+              </notebook>
+              <group>
+                  <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
               </group>
           </sheet>
           <!-- <div class="oe_chatter" name="oe_chatter">
