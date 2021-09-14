@@ -28,7 +28,7 @@
                               <field name="partner_company" attrs="{'readonly': True}"/>
                           </group>
                           <group>
-                              <field name="title" attrs="{'readonly': True}"/>
+                              <field name="partner_title" attrs="{'readonly': True}"/>
                               <field name="partner_function" attrs="{'readonly': True}"/>
                               <field name="partner_country" attrs="{'readonly': True}"/>
                               <field name="partner_city" attrs="{'readonly': True}"/>
