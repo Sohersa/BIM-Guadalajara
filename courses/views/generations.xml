@@ -20,6 +20,9 @@
                 <group>
                   <field name="category"/>
                 </group>
+                <group>
+                  <field name="speaker"/>
+                </group>
               </group>
               <notebook>
                 <page string="Lista de Alumnos">

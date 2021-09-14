@@ -29,4 +29,4 @@ class Generations(models.Model):
     student_ids = fields.One2many('courses.students', 'generation_id')
     
     notes = fields.Text()
-
+    speaker = fields.Many2one('hr.employee', string="Ponente")

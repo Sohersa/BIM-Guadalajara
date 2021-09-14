@@ -13,29 +13,38 @@
                       <field name="name" required="1" placeholder="Nombre..."/>
                   </h1>
               </div>
+              <group>
+                  <h4>
+                    <field name="grade"/>
+                  </h4>
+              </group>
               <notebook>
                   <page string="Contacto">
                       <group>
-                          <field name="partner_id"/>
-                          <field name="partner_email"/>
-                          <field name="partner_phone"/>
-                          <field name="partner_company"/>
-                      </group>
-                      <group>
-                          <!-- <field name="title"/> -->
-                          <field name="partner_function"/>
-                          <field name="partner_country"/>
-                          <field name="partner_city"/>
+                          <group>
+                              <field name="partner_id" attrs="{'readonly': True}"/>
+                              <field name="partner_email" attrs="{'readonly': True}"/>
+                              <field name="partner_phone" attrs="{'readonly': True}"/>
+                              <field name="partner_company" attrs="{'readonly': True}"/>
+                          </group>
+                          <group>
+                              <field name="title" attrs="{'readonly': True}"/>
+                              <field name="partner_function" attrs="{'readonly': True}"/>
+                              <field name="partner_country" attrs="{'readonly': True}"/>
+                              <field name="partner_city" attrs="{'readonly': True}"/>
+                          </group>
                       </group>
                   </page>
                   <page string="Información Académica">
                       <group>
-                          <field name="generation_id"/>
-                          <field name="group_id"/>
-                      </group>
-                      <group>
-                          <field name="state"/>
-                          <field name="origin"/>
+                          <group>
+                              <field name="generation_id"/>
+                              <field name="group_id"/>
+                          </group>
+                          <group>
+                              <field name="state"/>
+                              <field name="origin"/>
+                          </group>
                       </group>
                       <group>
                           <field name="diploma"/>
@@ -69,19 +78,30 @@
                   </h1>
               </div>
               <group>
-                  <field name="partner_id" string="Representante"/>
-                  <field name="generation_id"/>
+                  <group>
+                      <field name="partner_id" string="Representante"/>
+                      <field name="generation_id"/>
+                  </group>
               </group>
-              <group>
-                  <field name="student_ids"/>
-                  <field name="students_count"/>
-              </group>
-              <group string="Información de Alumnos">
-                  <field name="in_course_count"/>
-                  <field name="pending_project_total"/>
-                  <field name="approved_count"/>
-                  <field name="failed_count"/>
-              </group>
+
+              <notebook>
+                  <page string="Alumnos">
+                    <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                  </page>
+                  <page string="Información">
+                       <group>
+                        <group>
+                          <field name="students_count"/>
+                        </group>
+                        <group>
+                          <field name="in_course_count"/>
+                          <field name="pending_project_total"/>
+                          <field name="approved_count"/>
+                          <field name="failed_count"/>
+                        </group>
+                      </group>
+                  </page>
+              </notebook>
           </sheet>
         </form>
       </field>
