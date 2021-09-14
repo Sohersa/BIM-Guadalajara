@@ -14,24 +14,25 @@
                   </h1>
               </div>
               <group>
-                  <h4>
-                    <field name="grade"/>
-                  </h4>
+                  <group>
+                      <h4>
+                      </h4>
+                  </group>
               </group>
               <notebook>
                   <page string="Contacto">
                       <group>
                           <group>
-                              <field name="partner_id" attrs="{'readonly': True}"/>
-                              <field name="partner_email" attrs="{'readonly': True}"/>
-                              <field name="partner_phone" attrs="{'readonly': True}"/>
-                              <field name="partner_company" attrs="{'readonly': True}"/>
+                              <field name="partner_id"/>
+                              <field name="partner_email" attrs="{'readonly': False}"/>
+                              <field name="partner_phone" attrs="{'readonly': False}"/>
+                              <field name="partner_company" attrs="{'readonly': False}"/>
                           </group>
                           <group>
-                              <field name="partner_title" attrs="{'readonly': True}"/>
-                              <field name="partner_function" attrs="{'readonly': True}"/>
-                              <field name="partner_country" attrs="{'readonly': True}"/>
-                              <field name="partner_city" attrs="{'readonly': True}"/>
+                              <field name="partner_title" attrs="{'readonly': False}"/>
+                              <field name="partner_function" attrs="{'readonly': False}"/>
+                              <field name="partner_country" attrs="{'readonly': False}"/>
+                              <field name="partner_city" attrs="{'readonly': False}"/>
                           </group>
                       </group>
                   </page>
@@ -47,6 +48,7 @@
                           </group>
                       </group>
                       <group>
+                          <field name="grade" string="Calificación"/>
                           <field name="diploma"/>
                       </group>
                   </page>

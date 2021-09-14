@@ -20,6 +20,7 @@ class Courses(models.Model):
     pending_project_total = fields.Integer(string="Proyecto Pendiente", readonly="1")
     approved_total = fields.Integer(string="Aprovados", readonly="1")
     failed_total = fields.Integer(string="Reprobados", readonly="1")
+    total_hours = fields.Integer(string="Total de Horas")
 
     #photo for course
     photo = fields.Image(string="Foto", help="Foto de curso")

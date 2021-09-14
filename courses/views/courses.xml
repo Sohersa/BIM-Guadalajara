@@ -14,6 +14,11 @@
                     <field name="name" required="1" placeholder="Nombre..."/>
                 </h1>
             </div>
+            <group>
+              <group>
+                <field name="total_hours"/>
+              </group>
+            </group>
             <group string="Generaciones">
               <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
                 <form>
