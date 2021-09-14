@@ -3,27 +3,28 @@
 from odoo import models, fields, api
 
 
-class students(models.Model):
+class Student(models.Model):
     _name = "courses.students"
     _description = "Students"
-    #_inherit = ['mail.thread', 'mail.activity.mixin']
+#   _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    #Partner fields related to student
+#   Partner fields related to student
     partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
+    notes = fields.Text()
+
     partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", store="True")
     partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", store="True")
     partner_country = fields.Many2one('res.country', related='partner_id.country_id', string="País", store="True")
     partner_company = fields.Many2one('res.partner', related='partner_id.parent_id', string="Empresa", store="True")
     partner_city = fields.Char(related='partner_id.city', string="Ciudad", store="True")
     partner_function = fields.Char(related='partner_id.function', string="Puesto de Trabajo", store="True")
-#    partner_title = fields.Many2one('res.partner', related='partner_id.title', string="Profesión", store="True")
+    partner_title = fields.Many2one('res.partner.title', related='partner_id.title', string="Profesión", store="True")
 
-    notes = fields.Text()
     origin = fields.Selection([
         ('company', 'Empresa'),
         ('individual', 'Individual')]
-        ,'Origen')
+        , 'Origen')
 
     state = fields.Selection([
         ('in_course', 'Cursando'),
@@ -35,14 +36,19 @@ class students(models.Model):
     generation_id = fields.Many2one('courses.generations', string="Generación")
 
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
+    
+    team_id = fields.Many2one('course.student_teams', string="Equipo")
 
+    grade = fields.Float(string="Calificación")
     diploma = fields.Binary("Diploma")
-    #channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
+#   channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
 
-class student_group(models.Model):
+
+class StudentGroup(models.Model):
+
     _name = "courses.student_groups"
     _description = "Student Groups"
-    #_inherit = ['mail.thread', 'mail.activity.mixin']
+#   _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nombre", store="True")
 
@@ -56,3 +62,28 @@ class student_group(models.Model):
 
     generation_id = fields.Many2one('courses.generations', string="Curso")
     student_ids = fields.One2many('courses.students', 'group_id', string="Alumnos")
+    
+class StudentTeam(models.Model):
+    _name = "courses.student_teams"
+    _description = "Equipos de Alumnos"
+    
+    name = fields.Char(string="Nombre", store="True")
+    team_members = fields.Integer(string="Cantidad de Integrantes")
+    
+    student_ids = fields.One2many('courses.students', 'team_id', string="Integrantes")
+    
+    #AGREGAR IDs DE TAREAS
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

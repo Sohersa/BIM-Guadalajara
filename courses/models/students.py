@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class Students(models.Model):
+class Student(models.Model):
     _name = "courses.students"
     _description = "Students"
 #   _inherit = ['mail.thread', 'mail.activity.mixin']
@@ -36,6 +36,8 @@ class Students(models.Model):
     generation_id = fields.Many2one('courses.generations', string="Generación")
 
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
+    
+    team_id = fields.Many2one('course.student_teams', string="Equipo")
 
     grade = fields.Float(string="Calificación")
     diploma = fields.Binary("Diploma")
@@ -60,3 +62,28 @@ class StudentGroup(models.Model):
 
     generation_id = fields.Many2one('courses.generations', string="Curso")
     student_ids = fields.One2many('courses.students', 'group_id', string="Alumnos")
+    
+class StudentTeam(models.Model):
+    _name = "courses.student_teams"
+    _description = "Equipos de Alumnos"
+    
+    name = fields.Char(string="Nombre", store="True")
+    team_members = fields.Integer(string="Cantidad de Integrantes")
+    
+    student_ids = fields.One2many('courses.students', 'team_id', string="Integrantes")
+    
+    #AGREGAR IDs DE TAREAS
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -14,7 +14,7 @@
                 </h1>
               </div>
               <group>
-                <group string="Curso">
+                <group>
                   <field name="course_id"/>
                 </group>
                 <group>
