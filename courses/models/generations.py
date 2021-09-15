@@ -30,3 +30,5 @@ class Generation(models.Model):
     
     notes = fields.Text()
     speaker = fields.Many2one('hr.employee', string="Ponente")
+
+    team_ids = fields.One2many('courses.student_teams', 'generation_id')

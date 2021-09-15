@@ -28,6 +28,9 @@
                 <page string="Lista de Alumnos">
                   <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
                 </page>
+                <page string="Equipos">
+                  <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                </page>
                 <page string="Información">
                   <group>
                     <group>

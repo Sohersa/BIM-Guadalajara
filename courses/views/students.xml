@@ -109,6 +109,28 @@
       </field>
     </record>
 
+    <!-- TEAM form view -->
+    <record model="ir.ui.view" id="group_form_view">
+      <field name="name">courses.students.teams.view.form</field>
+      <field name="model">courses.student_teams</field>
+      <field name="arch" type="xml">
+        <form>
+          <header/>
+          <sheet string="Equipos">
+              <div class="oe_title">
+                  <h1>
+                      <field name="name" required="1" placeholder="Nombre..."/>
+                  </h1>
+              </div>
+              <group string="Integrantes">
+                  <field name="team_members"/>
+                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
       <!-- STUDENT search view -->
     <record model="ir.ui.view" id="students_search_view">
         <field name="name">courses.students.view.search</field>
@@ -131,7 +153,18 @@
         </field>
     </record>
 
-    <!-- explicit list view definition -->
+      <!-- TEAM search view -->
+    <record model="ir.ui.view" id="students_search_view">
+        <field name="name">courses.students.teams.view.search</field>
+        <field name="model">courses.student_teams</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- STUDENT explicit list view definition -->
     <record model="ir.ui.view" id="students_list">
       <field name="name">students list</field>
       <field name="model">courses.students</field>
@@ -145,6 +178,7 @@
       </field>
     </record>
 
+      <!-- GROUP explicit list view definition -->
     <record model="ir.ui.view" id="groups_list">
       <field name="name">groups list</field>
       <field name="model">courses.student_groups</field>
@@ -157,8 +191,20 @@
       </field>
     </record>
 
+      <!-- GROUP explicit list view definition -->
+    <record model="ir.ui.view" id="groups_list">
+      <field name="name">teams list</field>
+      <field name="model">courses.student_teams</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="team_members"/>
+          <field name="team_grade"/>
+        </tree>
+      </field>
+    </record>
 
-    <!-- actions opening views on models -->
+      <!-- STUDENT actions-->
     <record model="ir.actions.act_window" id="students_action_window">
       <field name="name">Students</field>
       <field name="res_model">courses.students</field>
@@ -168,6 +214,7 @@
       </field>
     </record>
 
+      <!-- GROUP actions -->
     <record model="ir.actions.act_window" id="groups_action_window">
       <field name="name">Groups</field>
       <field name="res_model">courses.student_groups</field>
@@ -177,11 +224,23 @@
       </field>
     </record>
 
+      <!-- TEAMS actions -->
+    <record model="ir.actions.act_window" id="groups_action_window">
+      <field name="name">Teams</field>
+      <field name="res_model">courses.student_teams</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">No hay equipos. Agregue uno.</p>
+      </field>
+    </record>
+
     <!-- Top menu item -->
     <menuitem name="Alumnos" id="students_menu_root" parent="courses_menu_root"/>
 
     <!-- menu categories -->
     <menuitem name="Lista" id="courses_menu_students" parent="students_menu_root" action="students_action_window"/>
     <menuitem name="Grupos" id="courses_menu_groups" parent="students_menu_root" action="groups_action_window"/>
+    <menuitem name="Equipos" id="courses_menu_groups" parent="students_menu_root" action="groups_action_window"/>
+
   </data>
 </odoo>
