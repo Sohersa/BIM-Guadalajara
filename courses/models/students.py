@@ -71,7 +71,7 @@ class StudentTeam(models.Model):
     team_members = fields.Integer(string="Cantidad de Integrantes")
     team_grade = fields.Float(string="Promedio General")
 
-    generation_id = fields.Many2one('courses.generations')
+    generation_id = fields.Many2one('courses.generations', string="Generación")
     student_ids = fields.One2many('courses.students', 'team_id', string="Integrantes")
     
     #AGREGAR IDs DE TAREAS
