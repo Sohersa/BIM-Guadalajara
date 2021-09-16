@@ -123,8 +123,10 @@
                   </h1>
               </div>
               <group string="Integrantes">
-                  <field name="team_members"/>
                   <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+              </group>
+              <group>
+                <field name="team_members"/>
               </group>
           </sheet>
         </form>

@@ -14,22 +14,16 @@
                     <field name="name" required="1" placeholder="Nombre..."/>
                 </h1>
             </div>
-            <group>
-              <group>
-                <field name="total_hours"/>
-              </group>
-            </group>
             <group string="Generaciones">
               <field name="generations_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
-                <form>
-                  <group>
-                    <field name="students_count" invisible="True"/>
-                    <field name="in_course_count" invisible="True"/>
-                    <field name="pending_project_total" invisible="True"/>
-                    <field name="approved_count" invisible="True"/>
-                    <field name="failed_count" invisible="True"/>
-                  </group>
-                </form>
+                <tree>
+                  <field name="name" string="Nombre"/>
+                  <field name="students_count"/>
+                  <field name="in_course_count"/>
+                  <field name="pending_project_total"/>
+                  <field name="approved_count"/>
+                  <field name="failed_count"/>
+                </tree>
               </field>
             </group>
             <group>

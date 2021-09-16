@@ -7,6 +7,9 @@
         <field name="model">courses.generations</field>
         <field name="arch" type="xml">
           <form>
+            <header>
+              <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
+            </header>
             <sheet string="Generaciones">
               <div class="oe_title">
                 <h1>
@@ -32,7 +35,7 @@
                   <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
                 </page>
                 <page string="Información">
-                  <group>
+                  <group string="Alumnos">
                     <group>
                       <field name="students_count"/>
                     </group>
@@ -41,6 +44,16 @@
                       <field name="pending_project_total"/>
                       <field name="approved_count"/>
                       <field name="failed_count"/>
+                    </group>
+                  </group>
+                  <group string="Agenda">
+                     <group>
+                        <field name="total_hours"/>
+                        <field name="total_days"/>
+                        <field name="total_weeks"/>
+                    </group>
+                    <group>
+                        <field name="start_date"/>
                     </group>
                   </group>
                 </page>
