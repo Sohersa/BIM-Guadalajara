@@ -60,6 +60,7 @@
     <record model="ir.ui.view" id="group_form_view">
       <field name="name">courses.students.groups.view.form</field>
       <field name="model">courses.student_groups</field>
+      <field name="inherit_id" ref="courses.students_form_view"/>
       <field name="arch" type="xml">
         <form>
           <header/>
@@ -78,11 +79,9 @@
 
               <notebook>
                   <page string="Alumnos">
-                    <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
-                        <xpath expr="//form/sheet/notebook/page[0]/field[@name='group_id']" position="attributes">
-                            <attribute name="invisible"/>
-                        </xpath>
-                    </field>
+                    <xpath expr="//field[@name='group_id']" position="attributes">
+                        <attribute name="invisible"/>
+                    </xpath>
                   </page>
                   <page string="Información">
                        <group>
