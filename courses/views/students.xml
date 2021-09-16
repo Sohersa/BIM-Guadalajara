@@ -78,7 +78,11 @@
 
               <notebook>
                   <page string="Alumnos">
-                    <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                    <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
+                        <xpath expr="//form/sheet/notebook/page[0]/field[@name='student_ids']" position="after">
+                            <field name="group_id" invisible="True"/>
+                        </xpath>
+                    </field>
                   </page>
                   <page string="Información">
                        <group>
@@ -100,7 +104,7 @@
     </record>
 
     <!-- TEAM form view -->
-    <record model="ir.ui.view" id="group_form_view">
+    <record model="ir.ui.view" id="team_form_view">
       <field name="name">courses.students.teams.view.form</field>
       <field name="model">courses.student_teams</field>
       <field name="arch" type="xml">
@@ -117,9 +121,6 @@
               </group>
               <group string="Integrantes">
                   <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
-              </group>
-              <group>
-                <field name="team_members"/>
               </group>
           </sheet>
         </form>

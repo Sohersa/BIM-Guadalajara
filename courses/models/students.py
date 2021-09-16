@@ -67,7 +67,6 @@ class StudentTeam(models.Model):
     _description = "Equipos de Alumnos"
     
     name = fields.Char(string="Nombre")
-    team_members = fields.Integer(string="Cantidad de Integrantes") #computado
     team_grade = fields.Float(string="Promedio General")
 
     generation_id = fields.Many2one('courses.generations', string="Generación")

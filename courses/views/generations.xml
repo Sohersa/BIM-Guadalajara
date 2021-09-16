@@ -18,13 +18,13 @@
               </div>
               <group>
                 <group>
-                  <field name="course_id"/>
+                  <field name="course_id" required="True"/>
                 </group>
                 <group>
                   <field name="category"/>
                 </group>
                 <group>
-                  <field name="speaker"/>
+                  <field name="speaker" required="True"/>
                 </group>
               </group>
               <notebook>
@@ -86,7 +86,20 @@
                   </field>
                 </page>
                 <page string="Equipos">
-                  <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                    <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
+                        <form>
+                          <sheet string="Equipos">
+                              <div class="oe_title">
+                                  <h1>
+                                      <field name="name" required="1" placeholder="Nombre..."/>
+                                  </h1>
+                              </div>
+                              <group string="Integrantes">
+                                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                              </group>
+                          </sheet>
+                        </form>
+                    </field>
                 </page>
                 <page string="Agenda">
                    <group>
