@@ -45,7 +45,7 @@
                           <group>
                               <group>
                                   <h4>
-                                    <field name="grade"/>
+                                    <field name="grade" string="Calificación"/>
                                   </h4>
                               </group>
                           </group>
