@@ -38,7 +38,7 @@ class Student(models.Model):
     generation_id = fields.Many2one('courses.generations', string="Generación")
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
     team_id = fields.Many2one('course.student_teams', string="Equipo")
-    assignments_ids = fields.Many2many('course.assignments', 'Tareas', '')
+    assignments_ids = fields.Many2many('course.assignments', 'Tareas', 'assignment_id', 'students_id', 'Tareas Asignadas')
     grade = fields.Float(string="Calificación")
     diploma = fields.Binary("Diploma")
 
