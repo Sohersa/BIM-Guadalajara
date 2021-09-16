@@ -25,7 +25,7 @@ class Generation(models.Model):
 
     #Generation category
     category = fields.Selection([('public', 'Público'),
-                                 ('c_company', 'Personalziado Empresa'),
+                                 ('c_company', 'Personalizado Empresa'),
                                  ('contracted', 'Contratado')], 'Categoría')
 
     #relational field to courses model

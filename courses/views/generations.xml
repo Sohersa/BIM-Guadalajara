@@ -91,6 +91,16 @@
                 <page string="Equipos">
                   <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
                 </page>
+                <page string="Agenda">
+                   <group>
+                      <field name="total_hours"/>
+                      <field name="total_days"/>
+                      <field name="total_weeks"/>
+                  </group>
+                  <group>
+                      <field name="start_date"/>
+                  </group>
+                </page>
                 <page string="Información">
                   <group string="Alumnos">
                     <group>
@@ -102,16 +112,6 @@
                       <field name="approved_count"/>
                       <field name="failed_count"/>
                     </group>
-                  </group>
-                </page>
-                <page string="Agenda">
-                   <group>
-                      <field name="total_hours"/>
-                      <field name="total_days"/>
-                      <field name="total_weeks"/>
-                  </group>
-                  <group>
-                      <field name="start_date"/>
                   </group>
                 </page>
               </notebook>

@@ -37,8 +37,8 @@ class Student(models.Model):
 
     generation_id = fields.Many2one('courses.generations', string="Generación")
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
-    team_id = fields.Many2one('course.student_teams', string="Equipo")
-    assignments_ids = fields.Many2many('course.assignments', 'Tareas', 'assignment_id', 'students_id', 'Tareas Asignadas')
+    team_id = fields.Many2one('courses.student_teams', string="Equipo")
+    assignments_ids = fields.Many2many('courses.assignments', 'Tareas', 'assignment_id', 'students_id', 'Tareas Asignadas')
     grade = fields.Float(string="Calificación")
     diploma = fields.Binary("Diploma")
 
@@ -67,7 +67,7 @@ class StudentTeam(models.Model):
     _description = "Equipos de Alumnos"
     
     name = fields.Char(string="Nombre")
-    team_members = fields.Integer(string="Cantidad de Integrantes")
+    team_members = fields.Integer(string="Cantidad de Integrantes") #computado
     team_grade = fields.Float(string="Promedio General")
 
     generation_id = fields.Many2one('courses.generations', string="Generación")
