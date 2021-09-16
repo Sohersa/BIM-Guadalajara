@@ -8,7 +8,7 @@ class Student(models.Model):
     _description = "Students"
 #   _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(related='res.partner.name', string="Nombre", store="True", readonly="True")
+    name = fields.Char(related='partner_id.name', string="Nombre", store="True", readonly="True")
     notes = fields.Text()
 
 #   Partner fields related to student
