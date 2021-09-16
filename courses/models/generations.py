@@ -14,7 +14,7 @@ class Generation(models.Model):
     status = fields.Selection([('new', 'Nuevo'),
                                ('in_process', 'En curso'),
                                ('terminated', 'Finalizado'),
-                               ('canceled', 'Cancelado')])
+                               ('canceled', 'Cancelado')], default="new")
 
     #Counter fields for every student status
     students_count = fields.Integer(string="Alumnos", readonly="1") #computado
@@ -41,7 +41,6 @@ class Generation(models.Model):
     total_days = fields.Float(string="Duración del Curso (Dias)") #computado
     total_weeks = fields.Float(string="Duración del Curso (Semanas)") #computado
     start_date = fields.Datetime(string="Fecha de Inicio") #calendario
-
 
     team_ids = fields.One2many('courses.student_teams', 'generation_id')
 

@@ -3,26 +3,22 @@
     'name': "courses",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Intern course administration system""",
 
     'description': """
-        Long description of module's purpose
+        Course administration system made for intern company purposes. It manage courses,
+        students, generations, sessions, assignments and student teams. The module is conected to
+        employees and calendar modules for session management 
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Sohersa",
+    'website': "https://www.sohersabim.com",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
+    'category': 'Tools',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'hr', 'calendar'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/courses.xml',
@@ -30,7 +26,7 @@
         'views/students.xml',
         'views/templates.xml',
     ],
-    # only loaded in demonstration mode
+
     'demo': [
         #'demo/demo.xml',
     ],

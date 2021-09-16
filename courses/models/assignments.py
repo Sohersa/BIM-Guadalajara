@@ -13,4 +13,3 @@ class Assignment(models.Model):
     due_date = fields.Datetime("Fecha de Entrega")
     
     student_ids = fields.Many2many('courses.students', 'Alumnos', 'students_id', 'assignment_id', 'Alumnos Asignados')
-    

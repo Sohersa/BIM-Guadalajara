@@ -8,11 +8,11 @@ class Student(models.Model):
     _description = "Students"
 #   _inherit = ['mail.thread', 'mail.activity.mixin']
 
-#   Partner fields related to student
-    partner_id = fields.Many2one('res.partner', string="Contacto")
     name = fields.Char(string="Nombre", store="True")
     notes = fields.Text()
 
+#   Partner fields related to student
+    partner_id = fields.Many2one('res.partner', string="Contacto")
     partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", store="True")
     partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", store="True")
     partner_country = fields.Many2one('res.country', related='partner_id.country_id', string="País", store="True")
@@ -21,6 +21,8 @@ class Student(models.Model):
     partner_function = fields.Char(related='partner_id.function', string="Puesto de Trabajo", store="True")
     partner_title = fields.Many2one('res.partner.title', related='partner_id.title', string="Profesión", store="True")
 
+
+    #student information
     origin = fields.Selection([
         ('company', 'Empresa'),
         ('individual', 'Individual')]
@@ -32,16 +34,13 @@ class Student(models.Model):
         ('aprobado', 'Aprobado'),
         ('reprobado', 'Reprobado')]
         , 'Estado Académico')
-    
+
     generation_id = fields.Many2one('courses.generations', string="Generación")
-
     group_id = fields.Many2one('courses.student_groups', string="Grupo")
-    
     team_id = fields.Many2one('course.student_teams', string="Equipo")
-
+    assignments_ids = fields.Many2many('course.assignments', 'Tareas', '')
     grade = fields.Float(string="Calificación")
     diploma = fields.Binary("Diploma")
-#   channel_ids = fields.Many2many('mail.channel', 'mail_channel_profile_partner', 'partner_id', 'channel_id', copy='False')
 
 
 class StudentGroup(models.Model):
@@ -67,14 +66,13 @@ class StudentTeam(models.Model):
     _name = "courses.student_teams"
     _description = "Equipos de Alumnos"
     
-    name = fields.Char(string="Nombre", store="True")
+    name = fields.Char(string="Nombre")
     team_members = fields.Integer(string="Cantidad de Integrantes")
     team_grade = fields.Float(string="Promedio General")
 
     generation_id = fields.Many2one('courses.generations', string="Generación")
     student_ids = fields.One2many('courses.students', 'team_id', string="Integrantes")
-    
-    #AGREGAR IDs DE TAREAS
+
     
     
     

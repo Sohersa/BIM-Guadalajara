@@ -122,6 +122,9 @@
                       <field name="name" required="1" placeholder="Nombre..."/>
                   </h1>
               </div>
+              <group>
+                  <field name="generation_id"/>
+              </group>
               <group string="Integrantes">
                   <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
               </group>
