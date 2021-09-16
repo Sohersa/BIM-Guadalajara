@@ -126,12 +126,7 @@
                                       <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
                                   </group>
                               </sheet>
-                              <!-- <div class="oe_chatter" name="oe_chatter">
-                                <field name="message_follower_ids" id="message_follower_ids"/>
-                                <field name="message_ids" id="message_ids"/>
-                                <field name="activity_ids" id="activity_ids"/>
-                              </div> -->
-                            </form>
+                         </form>
                     </field>
                   </page>
                   <page string="Información">
@@ -237,14 +232,13 @@
       </field>
     </record>
 
-      <!-- GROUP explicit list view definition -->
-    <record model="ir.ui.view" id="groups_list">
+      <!-- TEAM explicit list view definition -->
+    <record model="ir.ui.view" id="teams_list">
       <field name="name">teams list</field>
       <field name="model">courses.student_teams</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="team_members"/>
           <field name="team_grade"/>
         </tree>
       </field>
