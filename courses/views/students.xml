@@ -79,8 +79,8 @@
               <notebook>
                   <page string="Alumnos">
                     <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
-                        <xpath expr="//form/sheet/notebook/page[0]/field[@name='student_ids']" position="after">
-                            <field name="group_id" invisible="True"/>
+                        <xpath expr="//form/sheet/notebook/page[0]/field[@name='group_id']" position="attributes">
+                            <attribute name="invisible"/>
                         </xpath>
                     </field>
                   </page>
