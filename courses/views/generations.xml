@@ -32,11 +32,8 @@
                   <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
                     <tree>
                       <field name="name" string="Nombre"/>
-                      <field name="students_count"/>
-                      <field name="in_course_count"/>
-                      <field name="pending_project_total"/>
-                      <field name="approved_count"/>
-                      <field name="failed_count"/>
+                      <field name="state"/>
+                      <field name="grade"/>
                     </tree>
                     <form>
                       <sheet string="Alumnos">
@@ -102,7 +99,7 @@
                   </group>
                 </page>
                 <page string="Información">
-                  <group string="Alumnos">
+                  <group>
                     <group>
                       <field name="students_count"/>
                     </group>
