@@ -8,11 +8,11 @@ class Student(models.Model):
     _description = "Students"
 #   _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(string="Nombre", store="True")
+    name = fields.Char(related='res.partner.name', string="Nombre", store="True", readonly="True")
     notes = fields.Text()
 
 #   Partner fields related to student
-    partner_id = fields.Many2one('res.partner', string="Contacto")
+    partner_id = fields.Many2one('res.partner', string="Contacto", required="True")
     partner_phone = fields.Char(related='partner_id.phone', string="Teléfono", store="True")
     partner_email = fields.Char(related='partner_id.email', string="Correo Electrónico", store="True")
     partner_country = fields.Many2one('res.country', related='partner_id.country_id', string="País", store="True")

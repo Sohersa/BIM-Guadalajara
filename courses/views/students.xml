@@ -13,12 +13,6 @@
                       <field name="name" required="1" placeholder="Nombre..."/>
                   </h1>
               </div>
-              <group>
-                  <group>
-                      <h4>
-                      </h4>
-                  </group>
-              </group>
               <notebook>
                   <page string="Contacto">
                       <group>
@@ -46,10 +40,6 @@
                               <field name="state"/>
                               <field name="origin"/>
                           </group>
-                      </group>
-                      <group>
-                          <field name="grade" string="Calificación"/>
-                          <field name="diploma"/>
                       </group>
                   </page>
               </notebook>

@@ -29,7 +29,64 @@
               </group>
               <notebook>
                 <page string="Lista de Alumnos">
-                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
+                  <field name="student_ids" force_save="True" attrs="{}" on_change="1" nolabel="1">
+                    <tree>
+                      <field name="name" string="Nombre"/>
+                      <field name="students_count"/>
+                      <field name="in_course_count"/>
+                      <field name="pending_project_total"/>
+                      <field name="approved_count"/>
+                      <field name="failed_count"/>
+                    </tree>
+                    <form>
+                      <sheet string="Alumnos">
+                          <div class="oe_title">
+                              <h1>
+                                  <field name="name" required="1" placeholder="Nombre..."/>
+                              </h1>
+                          </div>
+                          <group>
+                              <group>
+                                  <h4>
+                                    <field name="grade"/>
+                                  </h4>
+                              </group>
+                          </group>
+                          <notebook>
+                              <page string="Contacto">
+                                  <group>
+                                      <group>
+                                          <field name="partner_id"/>
+                                          <field name="partner_email" attrs="{'readonly': False}"/>
+                                          <field name="partner_phone" attrs="{'readonly': False}"/>
+                                          <field name="partner_company" attrs="{'readonly': False}"/>
+                                      </group>
+                                      <group>
+                                          <field name="partner_title" attrs="{'readonly': False}"/>
+                                          <field name="partner_function" attrs="{'readonly': False}"/>
+                                          <field name="partner_country" attrs="{'readonly': False}"/>
+                                          <field name="partner_city" attrs="{'readonly': False}"/>
+                                      </group>
+                                  </group>
+                              </page>
+                              <page string="Información Académica">
+                                  <group>
+                                      <group>
+                                          <field name="group_id"/>
+                                      </group>
+                                      <group>
+                                          <field name="state"/>
+                                          <field name="origin"/>
+                                      </group>
+                                  </group>
+                              </page>
+                          </notebook>
+                          <group>
+                              <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="1"/>
+                          </group>
+                      </sheet>
+                    </form>
+                  </field>
                 </page>
                 <page string="Equipos">
                   <field name="team_ids" force_save="True" attrs="{}" on_change="1" nolabel="1"/>
