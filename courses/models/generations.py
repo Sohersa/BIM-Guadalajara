@@ -45,3 +45,6 @@ class Generation(models.Model):
     team_ids = fields.One2many('courses.student_teams', 'generation_id')
 
     notes = fields.Text()
+
+    def start_course(self):
+        self.status = 'in_process'

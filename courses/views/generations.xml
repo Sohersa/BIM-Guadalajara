@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
           <form>
             <header>
+              <button name="start_course" string="Empezar" type="object"/>
               <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
             </header>
             <sheet string="Generaciones">
