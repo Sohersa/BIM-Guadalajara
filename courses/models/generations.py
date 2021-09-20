@@ -33,8 +33,12 @@ class Generation(models.Model):
 
     #relational field to students model
     student_ids = fields.One2many('courses.students', 'generation_id')
-    
+    team_ids = fields.One2many('courses.student_teams', 'generation_id')
+
     speaker = fields.Many2one('hr.employee', string="Ponente")
+
+    session_ids = fields.One2many('courses.generations.sessions', 'generation_id', string="Sesiones")
+    assignment_ids = fields.One2many('courses.generations.assignments', 'generation_id', string="Tareas")
 
     #Course duration variables
     total_hours = fields.Float(string="Duración del Curso (Horas)") #computado
@@ -42,9 +46,27 @@ class Generation(models.Model):
     total_weeks = fields.Float(string="Duración del Curso (Semanas)") #computado
     start_date = fields.Datetime(string="Fecha de Inicio") #calendario
 
-    team_ids = fields.One2many('courses.student_teams', 'generation_id')
-
     notes = fields.Text()
 
     def start_course(self):
         self.status = 'in_process'
+
+class Session(models.Model):
+    _name = "courses.generations.sessions"
+    _description = "Sesiones"
+
+    name = fields.Char(string="Nombre")
+    generation_id = fields.Many2one('courses.generations', string="Generación")
+
+
+class Assignment(models.Model):
+    _name = "courses.generations.assignments"
+    _description = "Tareas"
+
+    name = fields.Char(string="Nombre")
+    grade = fields.Float(string="Calificación")
+
+    due_date = fields.Datetime("Fecha de Entrega")
+    #student_ids = fields.Many2many('courses.students', 'Alumnos', 'students_id', 'assignment_id', 'Alumnos Asignados')
+    generation_id = fields.Many2one('courses.generations', string="Generación")
+

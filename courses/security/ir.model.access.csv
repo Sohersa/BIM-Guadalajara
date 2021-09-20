@@ -4,3 +4,6 @@ access_courses_generations,courses.generations,model_courses_generations,base.gr
 access_courses_students,courses.students,model_courses_students,base.group_user,1,1,1,1
 access_courses_student_groups,courses.student_groups,model_courses_student_groups,base.group_user,1,1,1,1
 access_courses_student_teams,courses.student_teams,model_courses_student_teams,base.group_user,1,1,1,1
+access_courses_student_teams,courses.student_teams,model_courses_student_teams,base.group_user,1,1,1,1
+access_courses_generations_sessions,courses.generations_sessions,model_courses_generations_sessions,base.group_user,1,1,1,1
+access_courses_generations_assignments,courses.generations_assignments,model_courses_generations_assignments,base.group_user,1,1,1,1
