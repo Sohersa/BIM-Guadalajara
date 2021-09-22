@@ -62,7 +62,7 @@ class Generation(models.Model):
                 count += 1
             record['session_count'] = count
 
-    def action_view_team(self):
+    def action_view_sessions(self):
         return {
             'name': "Sesiones",
             'domain': ['generation_id', '=', self.id],
