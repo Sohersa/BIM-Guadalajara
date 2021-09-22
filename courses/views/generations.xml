@@ -9,7 +9,7 @@
           <form>
               <div class="oe_button_box" name="button_box">
                 <button class="oe_stat_button" type="object" name="action_view_sessions" icon="fa-calendar">
-                    <field string="Sesiones" name="team_count" widget="statinfo" modifiers="{'readonly':true}"/>
+                    <field string="Sesiones" name="session_count" widget="statinfo" modifiers="{'readonly':true}"/>
                 </button>
                 <button class="oe_stat_button" type="object" name="action_view_assignments" icon="fa-file-o">
                     <field string="Tareas" name="assignment_count" widget="statinfo" modifiers="{'readonly':true}"/>
