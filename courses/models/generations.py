@@ -62,7 +62,6 @@ class Generation(models.Model):
                 count += 1
             record['session_count'] = count
 
-    @api.multi
     def action_view_team(self):
         return {
             'name': "Sesiones",
@@ -83,7 +82,6 @@ class Generation(models.Model):
                 count += 1
             record['assignment_count'] = count
 
-    @api.multi
     def action_view_assignments(self):
         return {
             'name': "Tareas",
@@ -101,6 +99,7 @@ class Session(models.Model):
 
     name = fields.Char(string="Nombre")
     generation_id = fields.Many2one('courses.generations', string="Generación")
+
 
 
 class Assignment(models.Model):

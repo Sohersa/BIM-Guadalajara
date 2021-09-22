@@ -1,7 +1,7 @@
 <odoo>
     <data>
 
-    <!-- form view -->
+    <!-- GENERATIONS form view -->
       <record model="ir.ui.view" id="generations_form_view">
         <field name="name">courses.generations.view.form</field>
         <field name="model">courses.generations</field>
@@ -142,7 +142,16 @@
         </field>
       </record>
 
-    <!-- explicit list view definition -->
+        <!-- SESSIONS form view -->
+      <record model="ir.ui.view" id="generations_form_view">
+        <field name="name">courses.generations.view.form</field>
+        <field name="model">courses.generations</field>
+        <field name="arch" type="xml">
+          <form>
+          </form>
+        </field>
+      </record>
+    <!-- GENERATIONS explicit list view definition -->
       <record model="ir.ui.view" id="generations_list">
         <field name="name">generations list</field>
         <field name="model">courses.generations</field>
@@ -157,7 +166,7 @@
       </record>
 
 
-    <!-- actions opening views on models -->
+    <!-- GENERATIONS actions -->
       <record model="ir.actions.act_window" id="generations_action_window">
         <field name="name">Generations</field>
         <field name="res_model">courses.generations</field>
@@ -167,7 +176,7 @@
         </field>
       </record>
 
-    <!-- menu categories -->
+    <!-- GENERATIONS menu categories -->
       <menuitem name="Generaciones" id="courses_menu_gens" parent="courses_menu_root" action="generations_action_window"/>
 
     </data>
