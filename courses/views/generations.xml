@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
           <form>
               <div class="oe_button_box" name="button_box">
-                <button class="oe_stat_button" type="object" name="action_view_teams" icon="fa-calendar">
+                <button class="oe_stat_button" type="object" name="action_view_sessions" icon="fa-calendar">
                     <field string="Sesiones" name="team_count" widget="statinfo" modifiers="{'readonly':true}"/>
                 </button>
                 <button class="oe_stat_button" type="object" name="action_view_assignments" icon="fa-file-o">
@@ -143,14 +143,16 @@
       </record>
 
         <!-- SESSIONS form view -->
-      <record model="ir.ui.view" id="generations_form_view">
-        <field name="name">courses.generations.view.form</field>
-        <field name="model">courses.generations</field>
+      <record model="ir.ui.view" id="sessions_form_view">
+        <field name="name">courses.generations.sessions.view.form</field>
+        <field name="model">courses.generations.sessions</field>
         <field name="arch" type="xml">
           <form>
+
           </form>
         </field>
       </record>
+
     <!-- GENERATIONS explicit list view definition -->
       <record model="ir.ui.view" id="generations_list">
         <field name="name">generations list</field>
