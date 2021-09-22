@@ -148,7 +148,19 @@
         <field name="model">courses.generations.sessions</field>
         <field name="arch" type="xml">
           <form>
-
+            <header>
+              <button name="start_course" string="Empezar" type="object"/>
+              <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
+            </header>
+            <sheet string="Sesiones">
+              <div class="oe_title">
+                <h1>
+                  <field name="name" required="1" placeholder="Nombre..."/>
+                </h1>
+              </div>
+              <group>
+              </group>
+            </sheet>
           </form>
         </field>
       </record>
