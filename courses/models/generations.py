@@ -35,12 +35,13 @@ class Generation(models.Model):
     student_ids = fields.One2many('courses.students', 'generation_id')
     team_ids = fields.One2many('courses.student_teams', 'generation_id')
 
-    team_count = fields.Integer(compute="get_team_count")
     speaker = fields.Many2one('hr.employee', string="Ponente")
 
     session_ids = fields.One2many('courses.generations.sessions', 'generation_id', string="Sesiones")
-    assignment_ids = fields.One2many('courses.generations.assignments', 'generation_id', string="Tareas")
+    session_count = fields.Integer(compute="get_session_count")
 
+    assignment_ids = fields.One2many('courses.generations.assignments', 'generation_id', string="Tareas")
+    assignment_count = fields.Integer(compute="get_assignment_count")
     #Course duration variables
     total_hours = fields.Float(string="Duración del Curso (Horas)") #computado
     total_days = fields.Float(string="Duración del Curso (Dias)") #computado
@@ -52,13 +53,47 @@ class Generation(models.Model):
     def start_course(self):
         self.status = 'in_process'
 
-    @api.depends('team_ids')
-    def get_team_count(self):
+    #------------SESSION-SMART-BUTTON-METHODS------------
+    @api.depends('session_ids')
+    def get_session_count(self):
         count = 0
         for record in self:
-            for line in record.team_ids:
+            for line in record.session_ids:
                 count += 1
-            record['team_count'] = count
+            record['session_count'] = count
+
+    @api.multi
+    def action_view_team(self):
+        return {
+            'name': "Sesiones",
+            'domain': ['generation_id', '=', self.id],
+            'view_type': 'form',
+            'res_model': 'courses.generations.sessions',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'type': 'ir.actions.act.window',
+        }
+
+    #------------ASSIGNMENT-SMART-BUTTON-METHODS------------
+    @api.depends('assignment_ids')
+    def get_assignment_count(self):
+        count = 0
+        for record in self:
+            for line in record.assignment_ids:
+                count += 1
+            record['assignment_count'] = count
+
+    @api.multi
+    def action_view_assignments(self):
+        return {
+            'name': "Tareas",
+            'domain': ['generation_id', '=', self.id],
+            'view_type': 'form',
+            'res_model': 'courses.generations.assignments',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'type': 'ir.actions.act.window',
+        }
 
 class Session(models.Model):
     _name = "courses.generations.sessions"
