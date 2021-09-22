@@ -35,6 +35,7 @@ class Generation(models.Model):
     student_ids = fields.One2many('courses.students', 'generation_id')
     team_ids = fields.One2many('courses.student_teams', 'generation_id')
 
+    team_count = fields.Integer(compute="get_team_count")
     speaker = fields.Many2one('hr.employee', string="Ponente")
 
     session_ids = fields.One2many('courses.generations.sessions', 'generation_id', string="Sesiones")
@@ -50,6 +51,14 @@ class Generation(models.Model):
 
     def start_course(self):
         self.status = 'in_process'
+
+    @api.depends('team_ids')
+    def get_team_count(self):
+        count = 0
+        for record in self:
+            for line in record.team_ids:
+                count += 1
+            record['team_count'] = count
 
 class Session(models.Model):
     _name = "courses.generations.sessions"

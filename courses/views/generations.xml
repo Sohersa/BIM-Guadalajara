@@ -7,6 +7,11 @@
         <field name="model">courses.generations</field>
         <field name="arch" type="xml">
           <form>
+              <div class="oe_button_box" name="button_box">
+                <button class="oe_stat_button" type="object" name="action_view_teams" icon="fa-group">
+                    <field string="Equipos" name="team_count" widget="statinfo" modifiers="{'readonly':true}"/>
+                </button>
+              </div>
             <header>
               <button name="start_course" string="Empezar" type="object"/>
               <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
@@ -161,5 +166,6 @@
 
     <!-- menu categories -->
       <menuitem name="Generaciones" id="courses_menu_gens" parent="courses_menu_root" action="generations_action_window"/>
+
     </data>
 </odoo>
