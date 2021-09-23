@@ -49,13 +49,13 @@
                           <div class="oe_title">
                               <h1>
                                   <field name="name" required="1" placeholder="Nombre..."/>
+                                  <field name="grade" string="Calificación"/>
                               </h1>
                           </div>
                           <group>
                               <group>
-                                  <h4>
-                                    <field name="grade" string="Calificación"/>
-                                  </h4>
+                                  <h2>
+                                  </h2>
                               </group>
                           </group>
                           <notebook>
