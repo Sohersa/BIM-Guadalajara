@@ -7,6 +7,11 @@
         <field name="model">courses.generations</field>
         <field name="arch" type="xml">
           <form>
+            <header>
+              <button name="start_course" string="Empezar" type="object"/>
+              <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
+            </header>
+            <sheet string="Generaciones">
               <div class="oe_button_box" name="button_box">
                 <button class="oe_stat_button" type="object" name="action_view_sessions" icon="fa-calendar">
                     <field string="Sesiones" name="session_count" widget="statinfo" modifiers="{'readonly':true}"/>
@@ -15,11 +20,6 @@
                     <field string="Tareas" name="assignment_count" widget="statinfo" modifiers="{'readonly':true}"/>
                 </button>
               </div>
-            <header>
-              <button name="start_course" string="Empezar" type="object"/>
-              <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
-            </header>
-            <sheet string="Generaciones">
               <div class="oe_title">
                 <h1>
                   <field name="name" required="1" placeholder="Nombre..."/>
