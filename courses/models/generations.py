@@ -70,7 +70,7 @@ class Generation(models.Model):
             'res_model': 'courses.generations.sessions',
             'view_id': False,
             'view_mode': 'tree,form',
-            'type': 'ir.actions.act.window',
+            'type': 'ir.actions.act_window',
         }
 
     #------------ASSIGNMENT-SMART-BUTTON-METHODS------------
@@ -90,7 +90,7 @@ class Generation(models.Model):
             'res_model': 'courses.generations.assignments',
             'view_id': False,
             'view_mode': 'tree,form',
-            'type': 'ir.actions.act.window',
+            'type': 'ir.actions.act_window',
         }
 
 class Session(models.Model):
