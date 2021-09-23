@@ -38,10 +38,11 @@ class Generation(models.Model):
     speaker = fields.Many2one('hr.employee', string="Ponente")
 
     session_ids = fields.One2many('courses.generations.sessions', 'generation_id', string="Sesiones")
-    session_count = fields.Integer(compute="get_session_count")
+    session_count = fields.Integer(compute="get_session_count", store="True")
 
     assignment_ids = fields.One2many('courses.generations.assignments', 'generation_id', string="Tareas")
-    assignment_count = fields.Integer(compute="get_assignment_count")
+    assignment_count = fields.Integer(compute="get_assignment_count", store="True")
+
     #Course duration variables
     total_hours = fields.Float(string="Duración del Curso (Horas)") #computado
     total_days = fields.Float(string="Duración del Curso (Dias)") #computado
