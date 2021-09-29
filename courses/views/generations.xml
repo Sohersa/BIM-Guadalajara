@@ -12,7 +12,7 @@
               <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
             </header>
             <sheet string="Generaciones">
-              <div class="oe_button_box" name="button_box" id="a">
+              <div class="oe_button_box" name="button_box">
                 <button class="oe_stat_button" type="object" name="action_view_sessions" icon="fa-calendar">
                     <field string="Sesiones" name="session_count" widget="statinfo" modifiers="{'readonly':true}"/>
                 </button>
@@ -49,7 +49,7 @@
                           <div class="oe_title">
                               <h1>
                                   <field name="name" required="1" placeholder="Nombre..."/>
-                                  <field name="grade" string="Calificación" attrs="{'invisible':name != False')}"/>
+                                  <field name="grade" string="Calificación"/>
                               </h1>
                           </div>
                           <group>
