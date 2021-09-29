@@ -59,17 +59,16 @@ class Generation(models.Model):
     def get_session_count(self):
         for record in self:
             record.assignment_count = self.env['courses.generations.sessions'].search_count(
-                [('generation_id', '=', self.id)])
+                [('generation_id', '=', record.id)])
 
     def action_view_sessions(self):
         return {
-            'name': "Sesiones",
-            'domain': ['generation_id', '=', self.id],
-            'view_type': 'form',
-            'res_model': 'courses.generations.sessions',
-            'view_id': False,
-            'view_mode': 'tree,form',
             'type': 'ir.actions.act_window',
+            'name': "Sesiones",
+            'res_model': 'courses.generations.sessions',
+            'domain': [('generation_id', '=', self.id)],
+            'view_mode': 'tree,form',
+            'target': 'current',
         }
 
     #------------ASSIGNMENT-SMART-BUTTON-METHODS------------
@@ -77,17 +76,16 @@ class Generation(models.Model):
     def get_assignment_count(self):
         for record in self:
             record.assignment_count = self.env['courses.generations.assignments'].search_count(
-                [('generation_id', '=', self.id)])
+                [('generation_id', '=', record.id)])
 
     def action_view_assignments(self):
         return {
+            'type': 'ir.actions.act_window',
             'name': "Tareas",
-            'domain': ['generation_id', '=', self.id],
             'view_type': 'form',
             'res_model': 'courses.generations.assignments',
-            'view_id': False,
-            'view_mode': 'tree,form',
-            'type': 'ir.actions.act_window',
+            'domain': [('generation_id', '=', self.id)],
+            'target': 'current',
         }
 
 class Session(models.Model):
