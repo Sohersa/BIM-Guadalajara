@@ -57,11 +57,9 @@ class Generation(models.Model):
     #------------SESSION-SMART-BUTTON-METHODS------------
     @api.depends('session_ids')
     def get_session_count(self):
-        count = 0
         for record in self:
-            for line in record.session_ids:
-                count += 1
-            record['session_count'] = count
+            record.assignment_count = self.env['courses.generations.sessions'].search_count(
+                [('generation_id', '=', self.id)])
 
     def action_view_sessions(self):
         return {
@@ -77,11 +75,9 @@ class Generation(models.Model):
     #------------ASSIGNMENT-SMART-BUTTON-METHODS------------
     @api.depends('assignment_ids')
     def get_assignment_count(self):
-        count = 0
         for record in self:
-            for line in record.assignment_ids:
-                count += 1
-            record['assignment_count'] = count
+            record.assignment_count = self.env['courses.generations.assignments'].search_count(
+                [('generation_id', '=', self.id)])
 
     def action_view_assignments(self):
         return {
