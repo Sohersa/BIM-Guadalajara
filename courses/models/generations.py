@@ -55,16 +55,15 @@ class Generation(models.Model):
         self.status = 'in_process'
 
     #------------SESSION-SMART-BUTTON-METHODS------------
-    @api.depends('session_ids')
     def get_session_count(self):
         for record in self:
-            record.assignment_count = self.env['courses.generations.sessions'].search_count(
+            record.session_count = self.env['courses.generations.sessions'].search_count(
                 [('generation_id', '=', record.id)])
 
     def action_view_sessions(self):
         return {
             'type': 'ir.actions.act_window',
-            'name': "Sesiones",
+            'name': 'Sesiones',
             'res_model': 'courses.generations.sessions',
             'domain': [('generation_id', '=', self.id)],
             'view_mode': 'tree,form',
@@ -72,7 +71,6 @@ class Generation(models.Model):
         }
 
     #------------ASSIGNMENT-SMART-BUTTON-METHODS------------
-    @api.depends('assignment_ids')
     def get_assignment_count(self):
         for record in self:
             record.assignment_count = self.env['courses.generations.assignments'].search_count(
@@ -81,10 +79,10 @@ class Generation(models.Model):
     def action_view_assignments(self):
         return {
             'type': 'ir.actions.act_window',
-            'name': "Tareas",
-            'view_type': 'form',
+            'name': 'Tareas',
             'res_model': 'courses.generations.assignments',
             'domain': [('generation_id', '=', self.id)],
+            'view_mode': 'tree,form',
             'target': 'current',
         }
 
